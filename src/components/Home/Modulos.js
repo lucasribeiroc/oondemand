@@ -70,7 +70,7 @@ const Modulos = () => {
   return (
     <div
       style={{
-        background: "linear-gradient(to bottom, #001E27, #002A33, #00353f)",
+        backgroundColor: "#001E27",
         marginTop: "-250px", // Adiciona margem negativa para colar no componente de cima
         paddingBottom: "0px",
       }}
