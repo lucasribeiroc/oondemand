@@ -536,6 +536,55 @@ export default function Home() {
           </Slider>
         </div>
       </div>
+
+      {/* Nova seção abaixo dos cards */}
+      <div className="flex justify-center mt-20">
+        <div className="text-center">
+          <span
+            className="text-[48px] text-[#00E2F4]"
+            style={{
+              letterSpacing: "-0.9px",
+              fontFamily: "Poppins, sans-serif",
+              fontWeight: "700", // Poppins Mixed geralmente usa peso 700 para negrito
+            }}
+          >
+            Nossos truques
+          </span>
+          <span
+            className="text-[48px] text-white"
+            style={{
+              letterSpacing: "-0.9px",
+              fontFamily: "Poppins, sans-serif",
+              fontWeight: "400", // Poppins Mixed geralmente usa peso 400 para regular
+            }}
+          >
+            &nbsp;em cartaz!
+          </span>
+        </div>
+      </div>
+
+      {/* Novo texto abaixo */}
+      <div className="flex justify-center mt-10">
+        <div
+          className="text-center"
+          style={{
+            width: "1109px",
+            height: "88px",
+          }}
+        >
+          <span
+            className="text-[24px] text-white"
+            style={{
+              letterSpacing: "0.1px",
+              fontFamily: "Poppins, sans-serif",
+              fontWeight: "500", // Poppins Medium geralmente usa peso 500
+            }}
+          >
+            Dezenas de soluções oOndemand, testadas e aprovadas e prontas para
+            ser implementadas na sua empresa em no máximo 7 dias
+          </span>
+        </div>
+      </div>
     </div>
   );
 }
