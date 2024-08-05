@@ -4,6 +4,7 @@ import Contador from "../components/Home/Contador";
 import Solucoes from "../components/Home/Solucoes";
 import CarrosselTecnologias from "../components/Home/CarrosselTecnologias";
 import Modulos from "../components/Home/Modulos";
+import Clientes from "../components/Home/Clientes";
 
 const Teste = () => {
   return (
@@ -14,6 +15,7 @@ const Teste = () => {
       <Solucoes />
       <CarrosselTecnologias />
       <Modulos />
+      <Clientes />
     </div>
   );
 };
