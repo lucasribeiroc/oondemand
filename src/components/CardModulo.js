@@ -1,8 +1,11 @@
+import React from "react";
+
 const CardModulo = ({ modulo }) => {
   return (
     <div
       style={{
-        maxWidth: "20rem",
+        width: "300px", // Largura fixa
+        height: "500px", // Altura aumentada
         borderRadius: "0.5rem",
         overflow: "hidden",
         boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
@@ -10,7 +13,10 @@ const CardModulo = ({ modulo }) => {
         color: "white",
         margin: "0.5rem",
         fontFamily: "Montserrat, sans-serif",
-        border: "1px solid black", // Adiciona a borda preta
+        border: "1px solid black",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "space-between",
       }}
     >
       <div style={{ padding: "1rem" }}>
@@ -24,7 +30,7 @@ const CardModulo = ({ modulo }) => {
           {modulo.titulo}
         </div>
       </div>
-      <div style={{ width: "100%" }}>
+      <div style={{ width: "100%", flex: "1 0 auto" }}>
         <img
           src={modulo.imagem}
           alt={modulo.nome}
@@ -35,14 +41,18 @@ const CardModulo = ({ modulo }) => {
           }}
         />
       </div>
-      <div style={{ padding: "1rem" }}>
-        <div style={{ marginTop: "1rem" }}>
+      <div style={{ padding: "1rem", flex: "0 1 auto" }}>
+        {" "}
+        {/* Ajuste de flex */}
+        <div style={{ marginTop: "0.25rem" }}>
+          {" "}
+          {/* Espaçamento reduzido */}
           <p
             style={{
               color: "#00e2f4",
               fontSize: "20px",
               fontFamily: "Montserrat, sans-serif",
-              marginTop: "0", // Diminui a margem superior
+              marginTop: "0",
             }}
           >
             {modulo.nome}

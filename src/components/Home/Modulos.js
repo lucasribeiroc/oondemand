@@ -1,5 +1,7 @@
 import React from "react";
 import CardModulo from "../CardModulo";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 
 const Modulos = () => {
   const listaModulos = [
@@ -8,43 +10,62 @@ const Modulos = () => {
       nome: "Módulo Invoice OS",
       descricao:
         "Gerencia múltiplas moedas e automatiza processos financeiros.",
-      imagem: "/modulos1.png",
+      imagem: "/modulos1.png", // Caminho relativo correto
     },
     {
       titulo: "Precisa gerar pedidos de compra de serviços?",
       nome: "Módulo Link (Vitta)",
       descricao:
         "Automatize o processo e elimine a necessidade de notas fiscais de produtos.",
-      imagem: "/modulos2.png",
+      imagem: "/modulos2.png", // Caminho relativo correto
     },
     {
       titulo: "Precisa gerar propostas de vendas em menos tempo?",
       nome: "Módulo Proposta - Pedido de Vendas",
       descricao: "Automatiza a criação de propostas e pedidos de vendas.",
-      imagem: "/modulos3.png",
+      imagem: "/modulos3.png", // Caminho relativo correto
     },
     {
       titulo: "Falta de controle e muitos erros na emissão de NF?",
       nome: "Módulo de Integração com Arquivei (GS Golveia)",
       descricao:
         "Integre automaticamente com contas a pagar e evite erros dispendiosos.",
-      imagem: "/modulos4.png",
+      imagem: "/modulos4.png", // Caminho relativo correto
     },
     {
       titulo: "Precisa centralizar suas aplicações e aumentar produtividade?",
       nome: "APP Host",
       descricao:
         "Use uma interface intuitiva e eficiente para facilitar o gerenciamento.",
-      imagem: "/modulos5.png",
+      imagem: "/modulos5.png", // Caminho relativo correto
     },
     {
       titulo: "Está gastando muito tempo criando documentos?",
       nome: "Módulo Gerador de PDF",
       descricao:
-        " Automatize a geração de PDFs a partir de templates predefinidos e libere tempo da sua equipe. Módulo Gerador de PDF e Módulo ",
-      imagem: "/modulos6.png",
+        "Automatize a geração de PDFs a partir de templates predefinidos e libere tempo da sua equipe.",
+      imagem: "/modulos6.png", // Caminho relativo correto
     },
   ];
+
+  const responsive = {
+    superLargeDesktop: {
+      breakpoint: { max: 4000, min: 3000 },
+      items: 3,
+    },
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 3,
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 2,
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1,
+    },
+  };
 
   return (
     <div
@@ -102,10 +123,21 @@ const Modulos = () => {
         </div>
       </div>
 
-      <div className="flex justify-center flex-wrap py-10">
-        {listaModulos.map((modulo, index) => (
-          <CardModulo key={index} modulo={modulo} />
-        ))}
+      <div
+        style={{
+          background: "linear-gradient(to bottom, #001E27, #002A33, #00353f)",
+          padding: "2rem",
+          display: "flex",
+          justifyContent: "center",
+        }}
+      >
+        <div style={{ width: "80%" }}>
+          <Carousel responsive={responsive}>
+            {listaModulos.map((modulo, index) => (
+              <CardModulo key={index} modulo={modulo} />
+            ))}
+          </Carousel>
+        </div>
       </div>
     </div>
   );
