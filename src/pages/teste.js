@@ -5,6 +5,7 @@ import Solucoes from "../components/Home/Solucoes";
 import CarrosselTecnologias from "../components/Home/CarrosselTecnologias";
 import Modulos from "../components/Home/Modulos";
 import Clientes from "../components/Home/Clientes";
+import Testemunhos from "../components/Home/Testemunhos";
 
 const Teste = () => {
   return (
@@ -16,6 +17,7 @@ const Teste = () => {
       <CarrosselTecnologias />
       <Modulos />
       <Clientes />
+      <Testemunhos />
     </div>
   );
 };
