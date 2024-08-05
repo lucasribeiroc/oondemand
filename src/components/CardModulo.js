@@ -52,7 +52,7 @@ const CardModulo = ({ modulo }) => {
             {modulo.nome}
           </p>
           <p
-            style={{ color: "#B0B0B0", fontSize: "1rem", marginTop: "0.5rem" }}
+            style={{ color: "white", fontSize: "1rem", marginTop: "0.5rem" }} // Cor alterada para branco
           >
             {modulo.descricao}
           </p>

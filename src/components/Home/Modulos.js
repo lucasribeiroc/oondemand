@@ -3,6 +3,74 @@ import CardModulo from "../CardModulo";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
+const CustomLeftArrow = ({ onClick }) => {
+  return (
+    <button
+      onClick={onClick}
+      style={{
+        backgroundColor: "#00E2F4",
+        borderRadius: "50%",
+        border: "none",
+        width: "30px",
+        height: "30px",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        cursor: "pointer",
+        position: "absolute",
+        left: "0px",
+        top: "50%",
+        transform: "translateY(-50%)",
+        zIndex: 1,
+      }}
+    >
+      <span
+        style={{
+          border: "solid #2E363E",
+          borderWidth: "0 2px 2px 0",
+          display: "inline-block",
+          padding: "4px",
+          transform: "rotate(135deg) translateX(-1px)",
+        }}
+      />
+    </button>
+  );
+};
+
+const CustomRightArrow = ({ onClick }) => {
+  return (
+    <button
+      onClick={onClick}
+      style={{
+        backgroundColor: "#00E2F4",
+        borderRadius: "50%",
+        border: "none",
+        width: "30px",
+        height: "30px",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        cursor: "pointer",
+        position: "absolute",
+        right: "0px",
+        top: "50%",
+        transform: "translateY(-50%)",
+        zIndex: 1,
+      }}
+    >
+      <span
+        style={{
+          border: "solid #2E363E",
+          borderWidth: "0 2px 2px 0",
+          display: "inline-block",
+          padding: "4px",
+          transform: "rotate(-45deg) translateX(-2px)", // Move a seta um pouco para a esquerda
+        }}
+      />
+    </button>
+  );
+};
+
 const Modulos = () => {
   const listaModulos = [
     {
@@ -129,10 +197,15 @@ const Modulos = () => {
           padding: "2rem",
           display: "flex",
           justifyContent: "center",
+          position: "relative",
         }}
       >
         <div style={{ width: "80%" }}>
-          <Carousel responsive={responsive}>
+          <Carousel
+            responsive={responsive}
+            customLeftArrow={<CustomLeftArrow />}
+            customRightArrow={<CustomRightArrow />}
+          >
             {listaModulos.map((modulo, index) => (
               <CardModulo key={index} modulo={modulo} />
             ))}
