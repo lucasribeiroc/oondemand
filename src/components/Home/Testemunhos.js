@@ -1,6 +1,8 @@
-import React, { useRef } from "react";
+import React, { useState, useRef } from "react";
 import TestemunhoModulo from "../TestemunhoModulo"; // Importa o componente TestemunhoModulo
-import Carousel from "react-multi-carousel";
+import Carousel from "react-spring-3d-carousel";
+import { config } from "react-spring";
+import { v4 as uuidv4 } from "uuid"; // Corrige a importação do uuid
 import "react-multi-carousel/lib/styles.css";
 
 const CustomLeftArrow = () => (
@@ -81,17 +83,42 @@ const responsive = {
 };
 
 const Testemunhos = () => {
-  const carouselRef = useRef(null);
+  const [goToSlide, setGoToSlide] = useState(0);
+  const [offsetRadius, setOffsetRadius] = useState(2);
+  const [showNavigation, setShowNavigation] = useState(true);
+  const [carouselConfig, setCarouselConfig] = useState(config.gentle);
+  const startX = useRef(0);
+  const endX = useRef(0);
 
-  const handleLeftArrowClick = () => {
-    if (carouselRef.current) {
-      carouselRef.current.previous();
-    }
+  const slides = listaTestemunhos.map((testemunho, index) => ({
+    key: uuidv4(),
+    content: <TestemunhoModulo testemunho={testemunho} />,
+    onClick: () => setGoToSlide(index),
+  }));
+
+  const handleMouseDown = (e) => {
+    startX.current = e.clientX;
   };
 
-  const handleRightArrowClick = () => {
-    if (carouselRef.current) {
-      carouselRef.current.next();
+  const handleMouseUp = (e) => {
+    endX.current = e.clientX;
+    handleSwipe();
+  };
+
+  const handleTouchStart = (e) => {
+    startX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchEnd = (e) => {
+    endX.current = e.changedTouches[0].clientX;
+    handleSwipe();
+  };
+
+  const handleSwipe = () => {
+    if (startX.current - endX.current > 50) {
+      setGoToSlide((prev) => (prev < slides.length - 1 ? prev + 1 : 0));
+    } else if (endX.current - startX.current > 50) {
+      setGoToSlide((prev) => (prev > 0 ? prev - 1 : slides.length - 1));
     }
   };
 
@@ -102,24 +129,32 @@ const Testemunhos = () => {
           Testemunhos reais dos clientes que já foram encantados pela teste
         </h1>
       </div>
-      <div className="w-full max-w-[1180px] flex flex-col items-center mt-12">
-        <div className="w-full">
+      <div className="w-full max-w-[1180px] flex flex-col items-center mt-20">
+        <div
+          className="w-full"
+          style={{
+            width: "80%",
+            height: "500px",
+            margin: "0 auto",
+            perspective: "1000px", // Adiciona a perspectiva 3D
+          }}
+          onMouseDown={handleMouseDown}
+          onMouseUp={handleMouseUp}
+          onTouchStart={handleTouchStart}
+          onTouchEnd={handleTouchEnd}
+        >
           <Carousel
-            ref={carouselRef}
-            responsive={responsive}
-            infinite={true} // Configurar o carrossel para ser infinito
-            arrows={false} // Desativar as setas padrão
-            containerClass="relative"
-            itemClass="carousel-item-padding-40-px"
-          >
-            {listaTestemunhos.map((testemunho, index) => (
-              <TestemunhoModulo key={index} testemunho={testemunho} />
-            ))}
-          </Carousel>
+            slides={slides}
+            goToSlide={goToSlide}
+            offsetRadius={offsetRadius}
+            showNavigation={showNavigation}
+            animationConfig={carouselConfig}
+            style={{ transformStyle: "preserve-3d" }} // Adiciona o estilo de transformação 3D
+          />
         </div>
-        <div className="flex justify-center mt-5">
-          <CustomLeftArrow onClick={handleLeftArrowClick} />
-          <CustomRightArrow onClick={handleRightArrowClick} />
+        <div className="flex justify-center mt-10">
+          <CustomLeftArrow onClick={() => setGoToSlide(goToSlide - 1)} />
+          <CustomRightArrow onClick={() => setGoToSlide(goToSlide + 1)} />
         </div>
       </div>
     </div>
