@@ -1,71 +1,26 @@
-import React from "react";
+import React, { useRef } from "react";
 import TestemunhoModulo from "../TestemunhoModulo"; // Importa o componente TestemunhoModulo
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
-const CustomLeftArrow = ({ onClick }) => {
-  return (
-    <button
-      onClick={onClick}
-      style={{
-        backgroundColor: "#00E2F4",
-        borderRadius: "50%",
-        border: "none",
-        width: "30px",
-        height: "30px",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        cursor: "pointer",
-        position: "absolute",
-        left: "0px",
-        top: "50%",
-        transform: "translateY(-50%)",
-        zIndex: 1,
-      }}
-    >
-      <span
-        style={{
-          border: "solid #2E363E",
-          borderWidth: "0 2px 2px 0",
-          display: "inline-block",
-          padding: "4px",
-          transform: "rotate(135deg) translateX(-1px)",
-        }}
-      />
-    </button>
-  );
-};
+const CustomLeftArrow = () => (
+  <button className="bg-[#00E2F4] rounded-full border-none w-8 h-8 flex items-center justify-center cursor-pointer mr-2">
+    <span
+      className="border-solid border-[#2E363E] border-0 border-r-2 border-b-2 inline-block p-1"
+      style={{ transform: "rotate(135deg)", marginLeft: "2px" }}
+    />
+  </button>
+);
 
 const CustomRightArrow = ({ onClick }) => {
   return (
     <button
       onClick={onClick}
-      style={{
-        backgroundColor: "#00E2F4",
-        borderRadius: "50%",
-        border: "none",
-        width: "30px",
-        height: "30px",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        cursor: "pointer",
-        position: "absolute",
-        right: "0px",
-        top: "50%",
-        transform: "translateY(-50%)",
-        zIndex: 1,
-      }}
+      className="bg-[#00E2F4] rounded-full border-none w-8 h-8 flex items-center justify-center cursor-pointer ml-2"
     >
       <span
-        style={{
-          border: "solid #2E363E",
-          borderWidth: "0 2px 2px 0",
-          display: "inline-block",
-          padding: "4px",
-          transform: "rotate(-45deg) translateX(-2px)", // Move a seta um pouco para a esquerda
-        }}
+        className="border-solid border-[#2E363E] border-0 border-r-2 border-b-2 inline-block p-1 transform -rotate-45"
+        style={{ marginRight: "2px" }}
       />
     </button>
   );
@@ -126,63 +81,45 @@ const responsive = {
 };
 
 const Testemunhos = () => {
+  const carouselRef = useRef(null);
+
+  const handleLeftArrowClick = () => {
+    if (carouselRef.current) {
+      carouselRef.current.previous();
+    }
+  };
+
+  const handleRightArrowClick = () => {
+    if (carouselRef.current) {
+      carouselRef.current.next();
+    }
+  };
+
   return (
-    <div
-      style={{
-        width: "100%", // Largura de 100%
-        height: "987.78px", // Altura de 987.78px
-        backgroundColor: "#00353F", // Cor de fundo #00353F
-        paddingTop: "150px", // Aumentar o padding top para mover o texto para baixo
-        display: "flex", // Usar flexbox para centralizar
-        justifyContent: "flex-start", // Alinhar ao topo
-        alignItems: "center", // Centralizar horizontalmente
-        flexDirection: "column", // Dispor elementos em coluna
-      }}
-    >
-      <div
-        style={{
-          width: "1180px", // Largura de 1180px
-          height: "120px", // Altura de 120px
-          display: "flex", // Usar flexbox para centralizar o texto
-          justifyContent: "center", // Centralizar horizontalmente
-          alignItems: "center", // Centralizar verticalmente
-          paddingBottom: "20px", // Reduzir o padding bottom para mover o texto para cima
-        }}
-      >
-        <h1
-          style={{
-            color: "#FFFFFF", // Cor branca
-            fontFamily: "Montserrat, sans-serif", // Fonte Montserrat
-            fontWeight: "500", // Peso da fonte Medium
-            fontSize: "48px", // Tamanho da fonte 48px
-            letterSpacing: "-1px", // Espaçamento entre letras de -1px
-            textAlign: "center", // Centraliza o texto
-            margin: "0", // Remove margem padrão do h1
-          }}
-        >
+    <div className="w-full h-[987.78px] bg-[#00353F] pt-[150px] flex flex-col items-center">
+      <div className="w-[1180px] h-[120px] flex justify-center items-center pb-5">
+        <h1 className="text-white font-montserrat font-medium text-[48px] tracking-[-1px] text-center m-0">
           Testemunhos reais dos clientes que já foram encantados pela teste
         </h1>
       </div>
-      <div
-        style={{
-          width: "100%", // Largura de 100%
-          maxWidth: "1180px", // Largura máxima de 1180px
-          display: "flex", // Usar flexbox para centralizar o card
-          justifyContent: "center", // Centralizar horizontalmente
-          alignItems: "center", // Centralizar verticalmente
-          marginTop: "50px", // Espaçamento superior de 50px
-        }}
-      >
-        <div style={{ width: "100%" }}>
+      <div className="w-full max-w-[1180px] flex flex-col items-center mt-12">
+        <div className="w-full">
           <Carousel
+            ref={carouselRef}
             responsive={responsive}
-            customLeftArrow={<CustomLeftArrow />}
-            customRightArrow={<CustomRightArrow />}
+            infinite={true} // Configurar o carrossel para ser infinito
+            arrows={false} // Desativar as setas padrão
+            containerClass="relative"
+            itemClass="carousel-item-padding-40-px"
           >
             {listaTestemunhos.map((testemunho, index) => (
               <TestemunhoModulo key={index} testemunho={testemunho} />
             ))}
           </Carousel>
+        </div>
+        <div className="flex justify-center mt-5">
+          <CustomLeftArrow onClick={handleLeftArrowClick} />
+          <CustomRightArrow onClick={handleRightArrowClick} />
         </div>
       </div>
     </div>
