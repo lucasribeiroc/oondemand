@@ -119,8 +119,8 @@ const Testemunhos = () => {
             goToSlide === index
               ? "scale(1) translateX(0)"
               : index < goToSlide
-              ? "scale(1.5) translateX(-500px)"
-              : "scale(1.5) translateX(500px)",
+              ? "scale(1.5) translateX(-650px)"
+              : "scale(1.5) translateX(650px)",
           opacity: goToSlide === index ? 1 : 0.5,
           zIndex: goToSlide === index ? 1 : 0, // Ajusta o z-index para garantir que o card em evidência fique na frente
         }}
