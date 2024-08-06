@@ -1,12 +1,20 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
+import dynamic from "next/dynamic"; // Importa o dynamic do Next.js
 import TestemunhoModulo from "../TestemunhoModulo"; // Importa o componente TestemunhoModulo
-import Carousel from "react-spring-3d-carousel";
 import { config } from "react-spring";
 import { v4 as uuidv4 } from "uuid"; // Corrige a importação do uuid
 import "react-multi-carousel/lib/styles.css";
 
-const CustomLeftArrow = () => (
-  <button className="bg-[#00E2F4] rounded-full border-none w-8 h-8 flex items-center justify-center cursor-pointer mr-2">
+// Carrega o Carousel dinamicamente, desativando o SSR
+const Carousel = dynamic(() => import("react-spring-3d-carousel"), {
+  ssr: false,
+});
+
+const CustomLeftArrow = ({ onClick }) => (
+  <button
+    onClick={onClick}
+    className="bg-[#00E2F4] rounded-full border-none w-8 h-8 flex items-center justify-center cursor-pointer mr-2"
+  >
     <span
       className="border-solid border-[#2E363E] border-0 border-r-2 border-b-2 inline-block p-1"
       style={{ transform: "rotate(135deg)", marginLeft: "2px" }}
@@ -14,19 +22,17 @@ const CustomLeftArrow = () => (
   </button>
 );
 
-const CustomRightArrow = ({ onClick }) => {
-  return (
-    <button
-      onClick={onClick}
-      className="bg-[#00E2F4] rounded-full border-none w-8 h-8 flex items-center justify-center cursor-pointer ml-2"
-    >
-      <span
-        className="border-solid border-[#2E363E] border-0 border-r-2 border-b-2 inline-block p-1 transform -rotate-45"
-        style={{ marginRight: "2px" }}
-      />
-    </button>
-  );
-};
+const CustomRightArrow = ({ onClick }) => (
+  <button
+    onClick={onClick}
+    className="bg-[#00E2F4] rounded-full border-none w-8 h-8 flex items-center justify-center cursor-pointer ml-2"
+  >
+    <span
+      className="border-solid border-[#2E363E] border-0 border-r-2 border-b-2 inline-block p-1 transform -rotate-45"
+      style={{ marginRight: "2px" }}
+    />
+  </button>
+);
 
 const listaTestemunhos = [
   {
@@ -90,9 +96,38 @@ const Testemunhos = () => {
   const startX = useRef(0);
   const endX = useRef(0);
 
+  useEffect(() => {
+    // Verifica se o código está sendo executado no navegador
+    if (typeof window !== "undefined") {
+      // Adiciona o estilo inline ao body para remover a barra de rolagem horizontal
+      document.body.style.overflowX = "hidden";
+
+      // Limpa o estilo ao desmontar o componente
+      return () => {
+        document.body.style.overflowX = "";
+      };
+    }
+  }, []);
+
   const slides = listaTestemunhos.map((testemunho, index) => ({
     key: uuidv4(),
-    content: <TestemunhoModulo testemunho={testemunho} />,
+    content: (
+      <div
+        style={{
+          transition: "transform 0.5s ease",
+          transform:
+            goToSlide === index
+              ? "scale(1) translateX(0)"
+              : index < goToSlide
+              ? "scale(1.5) translateX(-500px)"
+              : "scale(1.5) translateX(500px)",
+          opacity: goToSlide === index ? 1 : 0.5,
+          zIndex: goToSlide === index ? 1 : 0, // Ajusta o z-index para garantir que o card em evidência fique na frente
+        }}
+      >
+        <TestemunhoModulo testemunho={testemunho} />
+      </div>
+    ),
     onClick: () => setGoToSlide(index),
   }));
 
@@ -133,10 +168,11 @@ const Testemunhos = () => {
         <div
           className="w-full"
           style={{
-            width: "80%",
+            width: "90%",
             height: "500px",
             margin: "0 auto",
-            perspective: "1000px", // Adiciona a perspectiva 3D
+            perspective: "1300px", // Adiciona a perspectiva 3D
+            // overflow: "hidden", // Oculta o overflow horizontal
           }}
           onMouseDown={handleMouseDown}
           onMouseUp={handleMouseUp}
