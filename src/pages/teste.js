@@ -6,6 +6,7 @@ import CarrosselTecnologias from "../components/Home/CarrosselTecnologias";
 import Modulos from "../components/Home/Modulos";
 import Clientes from "../components/Home/Clientes";
 import Testemunhos from "../components/Home/Testemunhos";
+import Footer from "../components/Home/Footer";
 
 const Teste = () => {
   return (
@@ -18,6 +19,7 @@ const Teste = () => {
       <Modulos />
       <Clientes />
       <Testemunhos />
+      <Footer />
     </div>
   );
 };
