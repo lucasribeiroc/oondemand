@@ -7,22 +7,7 @@ const CustomLeftArrow = ({ onClick }) => {
   return (
     <button
       onClick={onClick}
-      style={{
-        backgroundColor: "#00E2F4",
-        borderRadius: "50%",
-        border: "none",
-        width: "30px",
-        height: "30px",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        cursor: "pointer",
-        position: "absolute",
-        left: "0px",
-        top: "50%",
-        transform: "translateY(-50%)",
-        zIndex: 1,
-      }}
+      className="bg-[#00E2F4] rounded-full border-none w-[30px] h-[30px] flex items-center justify-center cursor-pointer absolute left-0 top-1/2 transform -translate-y-1/2 z-10"
     >
       <span
         style={{
@@ -41,32 +26,9 @@ const CustomRightArrow = ({ onClick }) => {
   return (
     <button
       onClick={onClick}
-      style={{
-        backgroundColor: "#00E2F4",
-        borderRadius: "50%",
-        border: "none",
-        width: "30px",
-        height: "30px",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        cursor: "pointer",
-        position: "absolute",
-        right: "0px",
-        top: "50%",
-        transform: "translateY(-50%)",
-        zIndex: 1,
-      }}
+      className="bg-[#00E2F4] rounded-full border-none w-[30px] h-[30px] flex items-center justify-center cursor-pointer absolute right-0 top-1/2 transform -translate-y-1/2 z-10"
     >
-      <span
-        style={{
-          border: "solid #2E363E",
-          borderWidth: "0 2px 2px 0",
-          display: "inline-block",
-          padding: "4px",
-          transform: "rotate(-45deg) translateX(-2px)", // Move a seta um pouco para a esquerda
-        }}
-      />
+      <span className="border-solid border-[#2E363E] border-r-2 border-b-2 border-t-0 border-l-0 inline-block p-[4px] transform -rotate-45 -translate-x-[2px]" />
     </button>
   );
 };
