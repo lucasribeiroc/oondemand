@@ -4,80 +4,32 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const NextArrow = (props) => {
-  const { className, style, onClick } = props;
-  return (
-    <div
-      className={className}
-      style={{ ...style, display: "block", background: "none" }} // Remover background
-      onClick={onClick}
-    />
-  );
+  const { className, onClick } = props;
+  return <div className={`${className} block bg-none`} onClick={onClick} />;
 };
 
 const PrevArrow = (props) => {
-  const { className, style, onClick } = props;
-  return (
-    <div
-      className={className}
-      style={{ ...style, display: "block", background: "none" }} // Remover background
-      onClick={onClick}
-    />
-  );
+  const { className, onClick } = props;
+  return <div className={`${className} block bg-none`} onClick={onClick} />;
 };
 
 const CarrosselTecnologias = () => {
   return (
-    <div
-      style={{
-        backgroundColor: "#001E27",
-        minHeight: "100vh",
-        paddingTop: "0px", // Remove o padding top
-        paddingBottom: "0px", // Remove o padding bottom
-      }}
-    >
-      {/* Nova seção abaixo dos cards */}
+    <div className="bg-[#001E27] min-h-screen pt-0 pb-0">
       <div className="flex justify-center">
         <div className="text-center pt-20">
-          <span
-            className="text-[48px] text-[#00E2F4]"
-            style={{
-              letterSpacing: "-0.9px",
-              fontFamily: "Poppins, sans-serif",
-              fontWeight: "700", // Poppins Mixed geralmente usa peso 700 para negrito
-            }}
-          >
+          <span className="text-[48px] text-[#00E2F4] tracking-[-0.9px] font-poppins font-bold">
             Nossa
           </span>
-          <span
-            className="text-[48px] text-white"
-            style={{
-              letterSpacing: "-0.9px",
-              fontFamily: "Poppins, sans-serif",
-              fontWeight: "400", // Poppins Mixed geralmente usa peso 400 para regular
-            }}
-          >
+          <span className="text-[48px] text-white tracking-[-0.9px] font-poppins font-normal">
             &nbsp;Caixa Mágica
           </span>
         </div>
       </div>
 
-      {/* Novo texto abaixo */}
       <div className="flex justify-center mt-10">
-        <div
-          className="text-center"
-          style={{
-            width: "1109px",
-            height: "88px",
-          }}
-        >
-          <span
-            className="text-[24px] text-white"
-            style={{
-              letterSpacing: "0.1px",
-              fontFamily: "Poppins, sans-serif",
-              fontWeight: "500", // Poppins Medium geralmente usa peso 500
-            }}
-          >
+        <div className="text-center w-[1109px] h-[88px]">
+          <span className="text-[24px] text-white tracking-[0.1px] font-poppins font-medium">
             Fazemos mágica com tecnologia e para isso usamos o que há de mais
             moderno no mercado, seguindo as tendências das grandes empresas.
           </span>
@@ -86,13 +38,7 @@ const CarrosselTecnologias = () => {
 
       {/* Carrossel de parceiros */}
       <div className="flex justify-center mt-10">
-        <div
-          className="text-center"
-          style={{
-            width: "1065px",
-            height: "150px",
-          }}
-        >
+        <div className="text-center w-[1065px] h-[150px]">
           <Slider
             infinite={true}
             slidesToShow={3}
@@ -104,51 +50,46 @@ const CarrosselTecnologias = () => {
             centerMode={true}
             centerPadding="20px"
           >
-            <div style={{ padding: "0 20px" }}>
+            <div className="px-5">
               <img
                 src="partner1.png"
                 alt="Partner 1"
-                style={{ height: "auto", margin: "0 20px", maxHeight: "150px" }}
+                className="h-auto mx-5 max-h-[150px]"
               />
             </div>
-            <div style={{ padding: "0 0px" }}>
+            <div className="px-0">
               <img
                 src="partner2.png"
                 alt="Partner 2"
-                style={{ height: "auto", margin: "0 20px", maxHeight: "150px" }}
+                className="h-auto mx-5 max-h-[150px]"
               />
             </div>
-            <div style={{ padding: "0 0px" }}>
+            <div className="px-0">
               <img
                 src="partner3.png"
                 alt="Partner 3"
-                style={{ height: "auto", margin: "0 20px", maxHeight: "150px" }}
+                className="h-auto mx-5 max-h-[150px]"
               />
             </div>
-            <div style={{ padding: "0 0px" }}>
+            <div className="px-0">
               <img
                 src="partner4.png"
                 alt="Partner 4"
-                style={{ height: "auto", margin: "0 20px", maxHeight: "150px" }}
+                className="h-auto mx-5 max-h-[150px]"
               />
             </div>
-            <div style={{ padding: "0 0px" }}>
+            <div className="px-0">
               <img
                 src="partner5.png"
                 alt="Partner 5"
-                style={{ height: "auto", margin: "0 20px", maxHeight: "150px" }}
+                className="h-auto mx-5 max-h-[150px]"
               />
             </div>
-            <div style={{ padding: "0 0px" }}>
+            <div className="px-0">
               <img
                 src="partner6.png"
                 alt="Partner 6"
-                style={{
-                  height: "auto",
-                  margin: "0 20px",
-                  maxHeight: "150px",
-                  width: "auto",
-                }}
+                className="h-auto mx-5 max-h-[150px] w-auto"
               />
             </div>
           </Slider>
