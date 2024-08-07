@@ -4,18 +4,18 @@ const Solucoes = () => {
   return (
     <div className="bg-[#001E27]">
       <div className="flex items-center justify-center mt-[-80px]">
-        <div className="text-[#00E2F4] font-poppins text-[48px] font-bold mb-[60px] tracking-[-0.9px]">
+        <div className="text-[#00E2F4] font-poppins text-[48px] font-bold mb-[60px] tracking-[-0.9px] text-center">
           O que você precisa?
         </div>
       </div>
       <div className="flex items-center justify-center">
-        <div className="font-poppins text-[24px] font-medium text-white tracking-[0.1px]">
+        <div className="font-poppins text-[24px] font-medium text-white tracking-[0.1px] text-center px-4 md:px-0">
           Resolvemos seus problemas em um passe de mágica
         </div>
       </div>
 
       {/* Cards */}
-      <div className="flex justify-center mt-20 space-x-[120px] items-center">
+      <div className="flex flex-col md:flex-row justify-center mt-20 md:space-x-[120px] items-center space-y-8 md:space-y-0">
         {/* Primeiro card */}
         <div className="w-[272.12px] h-[186.49px] bg-[#00353F] rounded-[7.28px] flex flex-col items-center justify-center p-[10px]">
           {/* Imagem centralizada */}
@@ -25,7 +25,7 @@ const Solucoes = () => {
             Rapidez
           </div>
           {/* Texto adicional */}
-          <div className="font-inter text-[12.74px] text-center text-white">
+          <div className="font-inter text-[12.74px] text-center text-white px-4">
             Mais tempo para você focar no que realmente importa
           </div>
         </div>
@@ -38,7 +38,7 @@ const Solucoes = () => {
             Economia
           </div>
           {/* Texto adicional */}
-          <div className="font-inter text-[12.74px] text-center text-white">
+          <div className="font-inter text-[12.74px] text-center text-white px-4">
             Soluções entregues em até 7 dias
           </div>
         </div>
