@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const Clientes = () => {
   return (
-    <div className="w-full max-w-[1439px] h-[399px] bg-white p-5 box-border">
+    <div className="w-full max-w-[1439px] h-[500px] md:h-[399px] bg-white p-5 box-border">
       <h1
         style={{
           fontFamily: "Montserrat, sans-serif",
@@ -17,26 +17,26 @@ const Clientes = () => {
       >
         Nossos <span style={{ fontWeight: "bold" }}>Clientes</span>
       </h1>
-      <div className="flex justify-center gap-5">
-        <div>
+      <div className="flex flex-col md:flex-row justify-center items-center gap-5">
+        <div className="text-center">
           <img
             src="/clientes1.png"
             alt="Cliente 1"
-            className="block" // Garante que a imagem seja exibida em seu tamanho original
+            className="block w-full md:w-auto md:max-w-none max-w-xs" // Ajusta o tamanho da imagem conforme a tela
           />
         </div>
-        <div>
+        <div className="text-center">
           <img
             src="/clientes2.png"
             alt="Cliente 2"
-            className="block" // Garante que a imagem seja exibida em seu tamanho original
+            className="block w-full md:w-auto md:max-w-none max-w-xs" // Ajusta o tamanho da imagem conforme a tela
           />
         </div>
-        <div>
+        <div className="text-center">
           <img
             src="/clientes3.png"
             alt="Cliente 3"
-            className="block" // Garante que a imagem seja exibida em seu tamanho original
+            className="block w-full md:w-auto md:max-w-none max-w-xs" // Ajusta o tamanho da imagem conforme a tela
           />
         </div>
       </div>
