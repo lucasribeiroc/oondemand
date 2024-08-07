@@ -28,8 +28,8 @@ const CarrosselTecnologias = () => {
       </div>
 
       <div className="flex justify-center mt-10">
-        <div className="text-center w-[1109px] h-[88px]">
-          <span className="text-[24px] text-white tracking-[0.1px] font-poppins font-medium">
+        <div className="text-center w-[90%] md:w-[1109px] h-auto md:h-[88px]">
+          <span className="text-[16px] md:text-[24px] text-white tracking-[0.1px] font-poppins font-medium">
             Fazemos mágica com tecnologia e para isso usamos o que há de mais
             moderno no mercado, seguindo as tendências das grandes empresas.
           </span>
@@ -38,7 +38,7 @@ const CarrosselTecnologias = () => {
 
       {/* Carrossel de parceiros */}
       <div className="flex justify-center mt-10">
-        <div className="text-center w-[1065px] h-[150px]">
+        <div className="text-center w-[90%] md:w-[1065px] h-auto md:h-[150px]">
           <Slider
             infinite={true}
             slidesToShow={3}
@@ -49,47 +49,67 @@ const CarrosselTecnologias = () => {
             prevArrow={<PrevArrow />}
             centerMode={true}
             centerPadding="20px"
+            responsive={[
+              {
+                breakpoint: 1024,
+                settings: {
+                  slidesToShow: 3,
+                },
+              },
+              {
+                breakpoint: 600,
+                settings: {
+                  slidesToShow: 2,
+                },
+              },
+              {
+                breakpoint: 480,
+                settings: {
+                  slidesToShow: 1,
+                },
+              },
+            ]}
           >
             <div className="px-5">
               <img
                 src="partner1.png"
                 alt="Partner 1"
-                className="h-auto mx-5 max-h-[150px]"
+                className="h-auto mx-5 max-h-[100px] md:max-h-[150px]"
               />
             </div>
             <div className="px-0">
               <img
                 src="partner2.png"
                 alt="Partner 2"
-                className="h-auto mx-5 max-h-[150px]"
+                className="h-auto mx-5 max-h-[100px] md:max-h-[150px]"
               />
             </div>
             <div className="px-0">
               <img
                 src="partner3.png"
                 alt="Partner 3"
-                className="h-auto mx-5 max-h-[150px]"
+                className="h-auto mx-5 max-h-[100px] md:max-h-[150px]"
               />
             </div>
             <div className="px-0">
               <img
                 src="partner4.png"
                 alt="Partner 4"
-                className="h-auto mx-5 max-h-[150px]"
+                className="h-auto mx-5 max-h-[100px] md:max-h-[150px]"
               />
             </div>
             <div className="px-0">
               <img
                 src="partner5.png"
                 alt="Partner 5"
-                className="h-auto mx-5 max-h-[150px]"
+                className="h-auto mx-5 max-h-[100px] md:max-h-[150px]"
               />
             </div>
             <div className="px-0">
               <img
                 src="partner6.png"
                 alt="Partner 6"
-                className="h-auto mx-5 max-h-[150px] w-auto"
+                className="h-auto mx-5 max-h-[100px] md:max-h-[150px] w-auto"
               />
             </div>
           </Slider>
