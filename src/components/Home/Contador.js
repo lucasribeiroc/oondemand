@@ -4,14 +4,7 @@ import Image from "next/image";
 const TimeUnit = ({ label, value }) => (
   <div className="flex flex-col items-center">
     <div className="text-center">{label}</div>
-    <div
-      style={{
-        fontSize: "59.42px",
-        fontFamily: "Poppins, sans-serif",
-        fontWeight: "400",
-        color: "white",
-      }}
-    >
+    <div className="text-[59.42px] font-poppins font-normal text-white">
       {value}
     </div>
   </div>
@@ -22,43 +15,19 @@ const TimerDisplay = ({ time }) => (
     <div className="flex space-x-4">
       <TimeUnit label="Dias" value={time.days} />
       <div className="flex items-center">
-        <div
-          style={{
-            fontSize: "59.42px",
-            fontFamily: "Poppins, sans-serif",
-            fontWeight: "400",
-            color: "white",
-            marginTop: "10px",
-          }}
-        >
+        <div className="text-[59.42px] font-poppins font-normal text-white mt-[10px]">
           :
         </div>
       </div>
       <TimeUnit label="Horas" value={time.hours} />
       <div className="flex items-center">
-        <div
-          style={{
-            fontSize: "59.42px",
-            fontFamily: "Poppins, sans-serif",
-            fontWeight: "400",
-            color: "white",
-            marginTop: "10px",
-          }}
-        >
+        <div className="text-[59.42px] font-poppins font-normal text-white mt-[10px]">
           :
         </div>
       </div>
       <TimeUnit label="Minutos" value={time.minutes} />
       <div className="flex items-center">
-        <div
-          style={{
-            fontSize: "59.42px",
-            fontFamily: "Poppins, sans-serif",
-            fontWeight: "400",
-            color: "white",
-            marginTop: "10px",
-          }}
-        >
+        <div className="text-[59.42px] font-poppins font-normal text-white mt-[10px]">
           :
         </div>
       </div>
@@ -125,10 +94,7 @@ const Contador = () => {
     >
       <div className="flex items-center w-full">
         <Image src="/cartola.png" alt="Cartola" width={362} height={362} />
-        <div
-          className="ml-[55px] pl-4 text-[#00E2F4] font-bold text-[36px] uppercase leading-none"
-          style={{ letterSpacing: "0.105em" }}
-        >
+        <div className="ml-[55px] pl-4 text-[#00E2F4] font-bold text-[36px] uppercase leading-none tracking-[0.105em]">
           <div>Num Passe</div>
           <div>De Mágica</div>
         </div>
