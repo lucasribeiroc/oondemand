@@ -144,7 +144,7 @@ const Modulos = () => {
       }}
     >
       <div className="flex justify-center">
-        <div className="text-center">
+        <div className="text-center pt-20">
           <span
             className="text-[48px] text-[#00E2F4]"
             style={{
