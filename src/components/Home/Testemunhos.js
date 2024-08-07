@@ -159,8 +159,8 @@ const Testemunhos = () => {
 
   return (
     <div className="w-full h-[987.78px] bg-[#00353F] pt-[150px] flex flex-col items-center">
-      <div className="w-[1180px] h-[120px] flex justify-center items-center pb-5">
-        <h1 className="text-white font-montserrat font-medium text-[48px] tracking-[-1px] text-center m-0">
+      <div className="w-full md:w-[1180px] h-[120px] flex justify-center items-center pb-5 px-4 md:px-0">
+        <h1 className="text-white font-montserrat font-medium text-[24px] md:text-[48px] tracking-[-1px] text-center m-0">
           Testemunhos reais dos clientes que já foram encantados pela teste
         </h1>
       </div>
