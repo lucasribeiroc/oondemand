@@ -111,7 +111,7 @@ const Modulos = () => {
       </div>
 
       <div className="flex justify-center mt-10">
-        <div className="text-center w-[1109px] h-[88px]">
+        <div className="text-center w-[1109px] h-auto md:h-[88px] px-4 md:px-0">
           <span className="text-[24px] text-white tracking-[0.1px] font-poppins font-medium">
             Dezenas de soluções oOndemand, testadas e aprovadas e prontas para
             ser implementadas na sua empresa em no máximo 7 dias
