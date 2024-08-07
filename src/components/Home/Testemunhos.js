@@ -36,7 +36,15 @@ const CustomRightArrow = ({ onClick }) => (
 
 const listaTestemunhos = [
   {
-    titulo: "75 horas economizadas com apenas um clique",
+    titulo: "75 horas economizadas com apenas um clique.",
+    nome: "Pitter SobreNome",
+    cargo: "Cargo - Vitta",
+    descricao:
+      "A oOnDemand transformou nossa empresa. Antes, o cadastro de ordens de pagamento levava 3 minutos e era repetido 1500 vezes por mês. Com a automação, reduzimos essa tarefa para um clique, economizando 4500 minutos, ou 75 horas, mensais. Essa mudança liberou um funcionário para atividades estratégicas, otimizando nosso fluxo de trabalho e melhorando nossa eficiência. A agilidade proporcionada pela oOnDemand trouxe benefícios significativos para nossa operação.",
+    imagem: "/testemunhos1.png", // Caminho relativo correto
+  },
+  {
+    titulo: "75 horas economizadas com apenas um clique.",
     nome: "Pitter SobreNome",
     cargo: "Cargo - Vitta",
     descricao:
@@ -44,7 +52,7 @@ const listaTestemunhos = [
     imagem: "/testemunhos1.png", // Caminho relativo correto
   },
   {
-    titulo: "75 horas economizadas com apenas um clique",
+    titulo: "75 horas economizadas com apenas um clique.",
     nome: "Pitter SobreNome",
     cargo: "Cargo - Vitta",
     descricao:
@@ -52,15 +60,7 @@ const listaTestemunhos = [
     imagem: "/testemunhos1.png", // Caminho relativo correto
   },
   {
-    titulo: "75 horas economizadas com apenas um clique",
-    nome: "Pitter SobreNome",
-    cargo: "Cargo - Vitta",
-    descricao:
-      "A oOnDemand transformou nossa empresa. Antes, o cadastro de ordens de pagamento levava 3 minutos e era repetido 1500 vezes por mês. Com a automação, reduzimos essa tarefa para um clique, economizando 4500 minutos, ou 75 horas, mensais.Essa mudança liberou um funcionário para atividades estratégicas, otimizando nosso fluxo de trabalho e melhorando nossa eficiência. A agilidade proporcionada pela oOnDemand trouxe benefícios significativos para nossa operação.",
-    imagem: "/testemunhos1.png", // Caminho relativo correto
-  },
-  {
-    titulo: "75 horas economizadas com apenas um clique",
+    titulo: "75 horas economizadas com apenas um clique.",
     nome: "Pitter SobreNome",
     cargo: "Cargo - Vitta",
     descricao:
