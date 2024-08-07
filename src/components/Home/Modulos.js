@@ -136,70 +136,28 @@ const Modulos = () => {
   };
 
   return (
-    <div
-      style={{
-        backgroundColor: "#001E27",
-        marginTop: "-250px", // Adiciona margem negativa para colar no componente de cima
-        paddingBottom: "0px",
-      }}
-    >
+    <div className="bg-[#001E27] -mt-[250px] pb-0">
       <div className="flex justify-center">
         <div className="text-center pt-20">
-          <span
-            className="text-[48px] text-[#00E2F4]"
-            style={{
-              letterSpacing: "-0.9px",
-              fontFamily: "Poppins, sans-serif",
-              fontWeight: "700", // Poppins Mixed geralmente usa peso 700 para negrito
-            }}
-          >
+          <span className="text-[48px] text-[#00E2F4] tracking-[-0.9px] font-poppins font-bold">
             Nossos truques
           </span>
-          <span
-            className="text-[48px] text-white"
-            style={{
-              letterSpacing: "-0.9px",
-              fontFamily: "Poppins, sans-serif",
-              fontWeight: "400", // Poppins Mixed geralmente usa peso 400 para regular
-            }}
-          >
+          <span className="text-[48px] text-white tracking-[-0.9px] font-poppins font-normal">
             &nbsp;em cartaz!
           </span>
         </div>
       </div>
 
-      {/* Novo texto abaixo */}
       <div className="flex justify-center mt-10">
-        <div
-          className="text-center"
-          style={{
-            width: "1109px",
-            height: "88px",
-          }}
-        >
-          <span
-            className="text-[24px] text-white"
-            style={{
-              letterSpacing: "0.1px",
-              fontFamily: "Poppins, sans-serif",
-              fontWeight: "500", // Poppins Medium geralmente usa peso 500
-            }}
-          >
+        <div className="text-center w-[1109px] h-[88px]">
+          <span className="text-[24px] text-white tracking-[0.1px] font-poppins font-medium">
             Dezenas de soluções oOndemand, testadas e aprovadas e prontas para
             ser implementadas na sua empresa em no máximo 7 dias
           </span>
         </div>
       </div>
 
-      <div
-        style={{
-          background: "linear-gradient(to bottom, #001E27, #002A33, #00353f)",
-          padding: "2rem",
-          display: "flex",
-          justifyContent: "center",
-          position: "relative",
-        }}
-      >
+      <div className="bg-gradient-to-b from-[#001E27] via-[#002A33] to-[#00353f] p-8 flex justify-center relative">
         <div style={{ width: "80%" }}>
           <Carousel
             responsive={responsive}
