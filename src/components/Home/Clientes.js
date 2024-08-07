@@ -2,16 +2,7 @@ import Image from "next/image";
 
 const Clientes = () => {
   return (
-    <div
-      style={{
-        width: "100%", // Largura automática
-        maxWidth: "1439px", // Limite máximo de largura
-        height: "399px",
-        backgroundColor: "#FFFFFF",
-        padding: "20px", // Adiciona padding para espaçamento interno
-        boxSizing: "border-box", // Inclui padding na largura total
-      }}
-    >
+    <div className="w-full max-w-[1439px] h-[399px] bg-white p-5 box-border">
       <h1
         style={{
           fontFamily: "Montserrat, sans-serif",
@@ -26,32 +17,26 @@ const Clientes = () => {
       >
         Nossos <span style={{ fontWeight: "bold" }}>Clientes</span>
       </h1>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center", // Centraliza as imagens
-          gap: "20px", // Espaçamento entre as imagens
-        }}
-      >
+      <div className="flex justify-center gap-5">
         <div>
           <img
             src="/clientes1.png"
             alt="Cliente 1"
-            style={{ display: "block" }} // Garante que a imagem seja exibida em seu tamanho original
+            className="block" // Garante que a imagem seja exibida em seu tamanho original
           />
         </div>
         <div>
           <img
             src="/clientes2.png"
             alt="Cliente 2"
-            style={{ display: "block" }} // Garante que a imagem seja exibida em seu tamanho original
+            className="block" // Garante que a imagem seja exibida em seu tamanho original
           />
         </div>
         <div>
           <img
             src="/clientes3.png"
             alt="Cliente 3"
-            style={{ display: "block" }} // Garante que a imagem seja exibida em seu tamanho original
+            className="block" // Garante que a imagem seja exibida em seu tamanho original
           />
         </div>
       </div>
