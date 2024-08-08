@@ -1,5 +1,5 @@
 import { useState } from "react";
-import CardModulo from "../CardModulo";
+import CardPageProdutos from "../CardsPageProdutos";
 
 const CardsProdutos = () => {
   const [selectedFilters, setSelectedFilters] = useState([]);
@@ -118,7 +118,7 @@ const CardsProdutos = () => {
         <hr className="w-full border-t border-white mt-4" />
         <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {filteredModulos.map((modulo, index) => (
-            <CardModulo key={index} modulo={modulo} />
+            <CardPageProdutos key={index} modulo={modulo} />
           ))}
         </div>
       </div>
