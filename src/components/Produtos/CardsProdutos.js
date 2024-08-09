@@ -17,6 +17,8 @@ const CardsProdutos = () => {
   const listaModulos = [
     {
       titulo: "Precisa gerenciar múltiplas moedas com eficiência?",
+      tituloProdModal:
+        "Transforme Sua Emissão de Notas Fiscais com a Integração: OMIE>Arquivei",
       nome: "Módulo Invoice OS",
       categoria: "Fiscal",
       descricao:
@@ -64,6 +66,7 @@ const CardsProdutos = () => {
     },
     {
       titulo: "Está gastando muito tempo criando documentos?",
+      tituloProdModal: "Está gastando muito tempo criando documentos?",
       nome: "Módulo Gerador de PDF",
       categoria: "Zoho",
       descricao:
