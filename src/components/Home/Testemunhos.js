@@ -1,54 +1,108 @@
 import React from "react";
-import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import TestemunhoModulo from "../TestemunhoModulo"; // Importe o componente TestemunhoModulo
 
-const responsive = {
-  superLargeDesktop: {
-    breakpoint: { max: 4000, min: 2000 },
-    items: 4,
-  },
-  desktop: {
-    breakpoint: { max: 2000, min: 1024 },
-    items: 3,
-  },
-  tablet: {
-    breakpoint: { max: 1024, min: 464 },
-    items: 2,
-  },
-  mobile: {
-    breakpoint: { max: 464, min: 0 },
-    items: 1,
-  },
+const settings = {
+  dots: true,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 4, // Mostrar 4 slides por padrão
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 3000,
+  nextArrow: <SampleNextArrow />,
+  prevArrow: <SamplePrevArrow />,
+  responsive: [
+    {
+      breakpoint: 1200,
+      settings: {
+        slidesToShow: 3,
+        nextArrow: <SampleNextArrow small />,
+        prevArrow: <SamplePrevArrow small />,
+      },
+    },
+    {
+      breakpoint: 992,
+      settings: {
+        slidesToShow: 2,
+        nextArrow: <SampleNextArrow smaller />,
+        prevArrow: <SamplePrevArrow smaller />,
+      },
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 1,
+        nextArrow: <SampleNextArrow smallest />,
+        prevArrow: <SamplePrevArrow smallest />,
+      },
+    },
+  ],
 };
+
+function SampleNextArrow(props) {
+  const { className, style, onClick, small, smaller, smallest } = props;
+  let right = "-25px";
+  if (small) right = "-15px";
+  if (smaller) right = "-10px";
+  if (smallest) right = "-5px";
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: "block", right, zIndex: 1 }}
+      onClick={onClick}
+    />
+  );
+}
+
+function SamplePrevArrow(props) {
+  const { className, style, onClick, small, smaller, smallest } = props;
+  let left = "-25px";
+  if (small) left = "-15px";
+  if (smaller) left = "-10px";
+  if (smallest) left = "-5px";
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: "block", left, zIndex: 1 }}
+      onClick={onClick}
+    />
+  );
+}
 
 const testemunhos = [
   {
     titulo: "Teste Sob Demanda",
-    descricao: "Seu desejo é uma ordem! Você só paga pelo tempo otimizado!",
-    imagem: "/carrossel1.png",
-    nome: "Nome 1",
+    descricao:
+      "Lorem ipsum dolor sit amet consectetur. Elit sociis consequat venenatis justo sed aenean amet lacus.Lorem ipsum dolor sit amet consectetur. Elit sociis consequat venenatis.",
+    imagem: "/testemunho1.png",
+    nome: "Suzana",
     cargo: "Cargo 1",
   },
   {
     titulo: "Outro Testemunho",
-    descricao: "Descrição do segundo testemunho.",
-    imagem: "/carrossel2.png",
-    nome: "Nome 2",
+    descricao:
+      "Lorem ipsum dolor sit amet consectetur. Elit sociis consequat venenatis justo sed aenean amet lacus.Lorem ipsum dolor sit amet consectetur. Elit sociis consequat venenatis.",
+    imagem: "/testemunho2.png",
+    nome: "Lívia",
     cargo: "Cargo 2",
   },
   {
     titulo: "Mais um Testemunho",
-    descricao: "Descrição do terceiro testemunho.",
-    imagem: "/carrossel3.png",
-    nome: "Nome 3",
+    descricao:
+      "Lorem ipsum dolor sit amet consectetur. Elit sociis consequat venenatis justo sed aenean amet lacus.Lorem ipsum dolor sit amet consectetur. Elit sociis consequat venenatis.",
+    imagem: "/testemunho3.png",
+    nome: "Kátia",
     cargo: "Cargo 3",
   },
   {
     titulo: "Testemunho Adicional",
-    descricao: "Descrição do quarto testemunho.",
-    imagem: "/carrossel4.png",
-    nome: "Nome 4",
+    descricao:
+      "Lorem ipsum dolor sit amet consectetur. Elit sociis consequat venenatis justo sed aenean amet lacus.Lorem ipsum dolor sit amet consectetur. Elit sociis consequat venenatis.",
+    imagem: "/testemunho4.png",
+    nome: "Matheus",
     cargo: "Cargo 4",
   },
   // Adicione mais testemunhos conforme necessário
@@ -56,29 +110,22 @@ const testemunhos = [
 
 const Testemunhos = () => {
   return (
-    <div className="h-[852px] w-auto bg-[#00353F] flex flex-col items-center">
-      <div className="w-full max-w-[1180px] h-[120px] flex items-center justify-center px-4 pt-[150px]">
-        <p className="text-white text-[48px] font-montserrat tracking-[-1px] text-center break-words">
+    <div className="h-auto w-full bg-[#00353F] flex flex-col items-center py-16">
+      <div className="w-full max-w-[1180px] flex items-center justify-center px-4">
+        <p className="text-white text-4xl font-montserrat tracking-tight text-center">
           Testemunhos reais dos clientes que já foram encantados pela Teste
         </p>
       </div>
-      <div className="w-full h-[442px] mt-[100px] pt-[50px] px-4 md:px-8 lg:px-16">
-        <Carousel
-          responsive={responsive}
-          infinite={true}
-          autoPlay={true}
-          autoPlaySpeed={3000}
-          keyBoardControl={true}
-          showDots={true}
-          containerClass="carousel-container"
-          itemClass="px-2" // Use Tailwind para ajustar o padding entre os itens
-        >
+      <div className="w-full 2xl:max-w-[1430px] xl:max-w-[1300px] lg:max-w-[1000px] mt-16 px-4">
+        <Slider {...settings} className="w-full">
           {testemunhos.map((testemunho, index) => (
-            <div key={index} className="px-2">
+            <div key={index} className="px-1.25">
+              {" "}
+              {/* 5px = 1.25rem */}
               <TestemunhoModulo testemunho={testemunho} />
             </div>
           ))}
-        </Carousel>
+        </Slider>
       </div>
     </div>
   );

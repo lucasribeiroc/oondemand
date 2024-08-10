@@ -15,7 +15,7 @@ const TestemunhoModulo = ({ testemunho }) => {
               {testemunho.descricao}
             </p>
           </div>
-          <div className="absolute bottom-0 left-[50%] transform -translate-x-1/2 translate-y-[50%] w-[87px] h-[43.5px] flex items-center justify-center overflow-visible">
+          <div className="absolute bottom-0 left-[50%] transform -translate-x-1/2 translate-y-[50%] w-[87px] h-[87px] flex items-center justify-center overflow-visible">
             <img
               src={testemunho.imagem}
               alt="Testemunho"
@@ -24,10 +24,10 @@ const TestemunhoModulo = ({ testemunho }) => {
           </div>
         </div>
         <div className="w-[303px] h-[108px] bg-[#001E27] p-4 flex items-center justify-center rounded-b-[10px] relative">
-          <p className="text-[18px] font-montserrat font-medium text-[#d8d8d8] text-center tracking-[0.12em] leading-[22.5px]">
+          <p className="text-[18px] font-montserrat font-medium text-[#d8d8d8] text-center tracking-[0.12em] leading-[22.5px] pt-[40px] uppercase">
             {testemunho.nome}
           </p>
-          <div className="absolute top-0 left-[50%] transform -translate-x-1/2 -translate-y-[50%] w-[87px] h-[43.5px] flex items-center justify-center overflow-visible">
+          <div className="absolute top-0 left-[50%] transform -translate-x-1/2 -translate-y-[50%] w-[87px] h-[87px] flex items-center justify-center overflow-visible">
             <img
               src={testemunho.imagem}
               alt="Testemunho"
