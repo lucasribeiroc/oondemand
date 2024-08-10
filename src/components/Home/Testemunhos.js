@@ -1,11 +1,11 @@
-import React from "react";
+import React, { useState, useRef } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import TestemunhoModulo from "../TestemunhoModulo"; // Importe o componente TestemunhoModulo
 
 const settings = {
-  dots: true,
+  dots: false, // Desativar os pontos originais do slider
   infinite: true,
   speed: 500,
   slidesToShow: 4, // Mostrar 4 slides por padrão
@@ -109,6 +109,14 @@ const testemunhos = [
 ];
 
 const Testemunhos = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const sliderRef = useRef(null);
+
+  const handleDotClick = (index) => {
+    setCurrentSlide(index);
+    sliderRef.current.slickGoTo(index);
+  };
+
   return (
     <div className="h-auto w-full bg-[#00353F] flex flex-col items-center py-16">
       <div className="w-full max-w-[1180px] flex items-center justify-center px-4">
@@ -117,7 +125,12 @@ const Testemunhos = () => {
         </p>
       </div>
       <div className="w-full 2xl:max-w-[1430px] xl:max-w-[1300px] lg:max-w-[1000px] mt-16 px-4">
-        <Slider {...settings} className="w-full">
+        <Slider
+          {...settings}
+          className="w-full"
+          ref={sliderRef}
+          beforeChange={(oldIndex, newIndex) => setCurrentSlide(newIndex)}
+        >
           {testemunhos.map((testemunho, index) => (
             <div key={index} className="px-1.25">
               {" "}
@@ -126,6 +139,19 @@ const Testemunhos = () => {
             </div>
           ))}
         </Slider>
+      </div>
+      <div className="flex justify-center mt-4">
+        <div className="flex space-x-2">
+          {[...Array(3)].map((_, index) => (
+            <div
+              key={index}
+              className={`w-3 h-3 rounded-full cursor-pointer ${
+                currentSlide === index ? "bg-[#00E2F4]" : "bg-[#434343]"
+              }`}
+              onClick={() => handleDotClick(index)}
+            ></div>
+          ))}
+        </div>
       </div>
     </div>
   );
