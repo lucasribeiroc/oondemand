@@ -15,7 +15,7 @@ const PrevArrow = (props) => {
 
 const CarrosselTecnologias = () => {
   return (
-    <div className="bg-[#001E27] min-h-screen pt-0 pb-0">
+    <div className="bg-[#001E27]">
       <div className="flex justify-center">
         <div className="text-center pt-20">
           <span className="text-[48px] text-[#00E2F4] tracking-[-0.9px] font-poppins font-bold">
@@ -28,7 +28,7 @@ const CarrosselTecnologias = () => {
       </div>
 
       <div className="flex justify-center mt-10">
-        <div className="text-center w-[90%] md:w-[1109px] h-auto md:h-[88px]">
+        <div className="text-center w-[90%] md:w-[90%] h-auto md:h-[88px]">
           <span className="text-[16px] md:text-[24px] text-white tracking-[0.1px] font-poppins font-medium">
             Fazemos mágica com tecnologia e para isso usamos o que há de mais
             moderno no mercado, seguindo as tendências das grandes empresas.
@@ -36,9 +36,8 @@ const CarrosselTecnologias = () => {
         </div>
       </div>
 
-      {/* Carrossel de parceiros */}
-      <div className="flex justify-center mt-10">
-        <div className="text-center w-[90%] md:w-[1065px] h-auto md:h-[150px]">
+      <div className="flex justify-center mt-10 md:mt-20 pb-20">
+        <div className="text-center w-[90%] md:w-[90%] h-auto">
           <Slider
             infinite={true}
             slidesToShow={3}
@@ -50,6 +49,13 @@ const CarrosselTecnologias = () => {
             centerMode={true}
             centerPadding="20px"
             responsive={[
+              {
+                breakpoint: 1930,
+                settings: {
+                  slidesToShow: 3,
+                  slidesToScroll: 1,
+                },
+              },
               {
                 breakpoint: 1024,
                 settings: {

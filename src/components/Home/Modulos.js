@@ -80,11 +80,15 @@ const Modulos = () => {
 
   const responsive = {
     superLargeDesktop: {
-      breakpoint: { max: 4000, min: 3000 },
-      items: 3,
+      breakpoint: { max: 4000, min: 2500 },
+      items: 5,
+    },
+    largeDesktop: {
+      breakpoint: { max: 2500, min: 1880 },
+      items: 4,
     },
     desktop: {
-      breakpoint: { max: 3000, min: 1024 },
+      breakpoint: { max: 1880, min: 1024 },
       items: 3,
     },
     tablet: {
@@ -98,9 +102,9 @@ const Modulos = () => {
   };
 
   return (
-    <div className="bg-[#001E27] -mt-[250px] pb-0">
+    <div className="bg-[#001E27] pb-0">
       <div className="flex justify-center">
-        <div className="text-center pt-20">
+        <div className="text-center pt-0">
           <span className="text-[48px] text-[#00E2F4] tracking-[-0.9px] font-poppins font-bold">
             Nossos truques
           </span>

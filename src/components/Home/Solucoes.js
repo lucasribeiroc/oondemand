@@ -3,8 +3,8 @@ import Image from "next/image";
 const Solucoes = () => {
   return (
     <div className="bg-[#001E27]">
-      <div className="flex items-center justify-center mt-[-80px]">
-        <div className="text-[#00E2F4] font-poppins text-[48px] font-bold mb-[60px] tracking-[-0.9px] text-center">
+      <div className="flex items-center justify-center">
+        <div className="text-[#00E2F4] font-poppins text-[48px] font-bold mb-[60px] tracking-[-0.9px] text-center pt-12">
           O que você precisa?
         </div>
       </div>
@@ -15,9 +15,9 @@ const Solucoes = () => {
       </div>
 
       {/* Cards */}
-      <div className="flex flex-col md:flex-row justify-center mt-20 md:space-x-[120px] items-center space-y-8 md:space-y-0">
+      <div className="flex flex-wrap justify-center mt-20 items-center space-y-8 md:space-y-0 lg:space-y-0 lg:flex-nowrap lg:space-x-[120px]">
         {/* Primeiro card */}
-        <div className="w-[272.12px] h-[186.49px] bg-[#00353F] rounded-[7.28px] flex flex-col items-center justify-center p-[10px]">
+        <div className="w-[272.12px] h-[186.49px] bg-[#00353F] rounded-[7.28px] flex flex-col items-center justify-center p-[10px] m-4">
           {/* Imagem centralizada */}
           <img src="icon1.png" alt="Icon 1" className="mb-4" />
           {/* Texto Rapidez */}
@@ -30,7 +30,7 @@ const Solucoes = () => {
           </div>
         </div>
         {/* Segundo card */}
-        <div className="w-[272.12px] h-[172.49px] bg-[#00353F] rounded-[7.28px] flex flex-col items-center justify-center p-[10px]">
+        <div className="w-[272.12px] h-[172.49px] bg-[#00353F] rounded-[7.28px] flex flex-col items-center justify-center p-[10px] m-4">
           {/* Imagem centralizada */}
           <img src="icon2.png" alt="Icon 2" className="mb-4" />
           {/* Texto Economia */}
@@ -43,7 +43,7 @@ const Solucoes = () => {
           </div>
         </div>
         {/* Terceiro card */}
-        <div className="w-[272.12px] h-[186.49px] bg-[#00353F] rounded-[7.28px] flex flex-col items-center justify-center p-[10px]">
+        <div className="w-[272.12px] h-[186.49px] bg-[#00353F] rounded-[7.28px] flex flex-col items-center justify-center p-[10px] m-4 md:pb-16 lg:pb-0">
           {/* Imagem centralizada */}
           <img src="icon3.png" alt="Icon 3" className="mb-4" />
           {/* Texto Eficiência */}

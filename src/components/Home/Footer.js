@@ -1,14 +1,14 @@
 const Footer = () => {
   return (
-    <div className="w-full h-[460px]">
-      <div className="w-full h-[383px] bg-[#001E27] pl-24 flex items-center">
+    <div className="w-full bg-[#001E27] h-auto md:h-[460px]">
+      <div className="w-full h-auto md:h-[460px] bg-[#001E27] p-6 md:pl-24 flex flex-col md:flex-row items-center justify-center">
         <img
           src="logo-footer.svg"
           alt="Logo Footer"
-          className="w-[200px] h-[200px]"
+          className="w-[200px] h-[200px] mb-6 md:mb-0"
         />
-        <div className="flex">
-          <div className="pl-[350px]">
+        <div className="flex flex-col md:flex-row md:justify-center w-full md:w-auto">
+          <div className="md:pl-[50px] mb-6 md:mb-0 text-center md:text-left">
             <p className="text-[#00E2F4] font-montserrat text-[16px]">
               Discovery
             </p>
@@ -22,7 +22,7 @@ const Footer = () => {
               Most selled
             </p>
           </div>
-          <div className="pl-[120px]">
+          <div className="md:pl-[50px] mb-6 md:mb-0 text-center md:text-left">
             <p className="text-[#00E2F4] font-montserrat text-[16px]">About</p>
             <p className="text-[#E1E1E1] font-montserrat text-[16px] mt-8">
               Help
@@ -34,7 +34,7 @@ const Footer = () => {
               Affiliate
             </p>
           </div>
-          <div className="pl-[120px]">
+          <div className="md:pl-[50px] text-center md:text-left">
             <p className="text-[#00E2F4] font-montserrat text-[16px]">Info</p>
             <p className="text-[#E1E1E1] font-montserrat text-[16px] mt-8">
               Contact us

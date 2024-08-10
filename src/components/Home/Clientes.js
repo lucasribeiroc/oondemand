@@ -2,7 +2,9 @@ import Image from "next/image";
 
 const Clientes = () => {
   return (
-    <div className="w-full max-w-[1439px] h-[500px] md:h-[399px] bg-white p-5 box-border">
+    <div className="w-full bg-white p-5 pb-24 box-border">
+      {" "}
+      {/* Ajusta o padding-bottom para 100px */}
       <h1
         style={{
           fontFamily: "Montserrat, sans-serif",
@@ -17,26 +19,26 @@ const Clientes = () => {
       >
         Nossos <span style={{ fontWeight: "bold" }}>Clientes</span>
       </h1>
-      <div className="flex flex-col md:flex-row justify-center items-center gap-5">
-        <div className="text-center">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 justify-center items-center w-full">
+        <div className="text-center w-full">
           <img
             src="/clientes1.png"
             alt="Cliente 1"
-            className="block w-full md:w-auto md:max-w-none max-w-xs" // Ajusta o tamanho da imagem conforme a tela
+            className="block w-full max-w-xs mx-auto" // Ajusta o tamanho da imagem conforme a tela
           />
         </div>
-        <div className="text-center">
+        <div className="text-center w-full">
           <img
             src="/clientes2.png"
             alt="Cliente 2"
-            className="block w-full md:w-auto md:max-w-none max-w-xs" // Ajusta o tamanho da imagem conforme a tela
+            className="block w-full max-w-xs mx-auto" // Ajusta o tamanho da imagem conforme a tela
           />
         </div>
-        <div className="text-center">
+        <div className="text-center w-full md:col-span-2 lg:col-span-1 md:pb-12 lg:pb-0">
           <img
             src="/clientes3.png"
             alt="Cliente 3"
-            className="block w-full md:w-auto md:max-w-none max-w-xs" // Ajusta o tamanho da imagem conforme a tela
+            className="block w-full max-w-xs mx-auto" // Ajusta o tamanho da imagem conforme a tela
           />
         </div>
       </div>

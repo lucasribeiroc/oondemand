@@ -15,6 +15,12 @@ module.exports = {
       fontFamily: {
         sans: ["Montserrat", "sans-serif"],
         poppins: ["Poppins", "sans-serif"], // Adiciona a fonte Poppins
+        "lexend-peta": ['"Lexend Peta"', "sans-serif"], // Adiciona a fonte Lexend Peta
+        gotham: ["Gotham", "sans-serif"], // Adiciona a fonte Gotham
+      },
+      screens: {
+        "2xl": "1900px", // Adiciona a media query personalizada para 1900px
+        "3xl": "2500px", // Adiciona a media query personalizada para 2500px
       },
     },
   },

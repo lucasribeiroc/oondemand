@@ -1,86 +1,20 @@
-import React, { useState, useRef, useEffect } from "react";
-import dynamic from "next/dynamic"; // Importa o dynamic do Next.js
-import TestemunhoModulo from "../TestemunhoModulo"; // Importa o componente TestemunhoModulo
-import { config } from "react-spring";
-import { v4 as uuidv4 } from "uuid"; // Corrige a importação do uuid
+import React from "react";
+import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-
-// Carrega o Carousel dinamicamente, desativando o SSR
-const Carousel = dynamic(() => import("react-spring-3d-carousel"), {
-  ssr: false,
-});
-
-const CustomLeftArrow = ({ onClick }) => (
-  <button
-    onClick={onClick}
-    className="bg-[#00E2F4] rounded-full border-none w-8 h-8 flex items-center justify-center cursor-pointer mr-2"
-  >
-    <span
-      className="border-solid border-[#2E363E] border-0 border-r-2 border-b-2 inline-block p-1"
-      style={{ transform: "rotate(135deg)", marginLeft: "2px" }}
-    />
-  </button>
-);
-
-const CustomRightArrow = ({ onClick }) => (
-  <button
-    onClick={onClick}
-    className="bg-[#00E2F4] rounded-full border-none w-8 h-8 flex items-center justify-center cursor-pointer ml-2"
-  >
-    <span
-      className="border-solid border-[#2E363E] border-0 border-r-2 border-b-2 inline-block p-1 transform -rotate-45"
-      style={{ marginRight: "2px" }}
-    />
-  </button>
-);
-
-const listaTestemunhos = [
-  {
-    titulo: "75 horas economizadas com apenas um clique.",
-    nome: "Pitter SobreNome",
-    cargo: "Cargo - Vitta",
-    descricao:
-      "A oOnDemand transformou nossa empresa. Antes, o cadastro de ordens de pagamento levava 3 minutos e era repetido 1500 vezes por mês. Com a automação, reduzimos essa tarefa para um clique, economizando 4500 minutos, ou 75 horas, mensais. Essa mudança liberou um funcionário para atividades estratégicas, otimizando nosso fluxo de trabalho e melhorando nossa eficiência. A agilidade proporcionada pela oOnDemand trouxe benefícios significativos para nossa operação.",
-    imagem: "/testemunhos1.png", // Caminho relativo correto
-  },
-  {
-    titulo: "75 horas economizadas com apenas um clique.",
-    nome: "Pitter SobreNome",
-    cargo: "Cargo - Vitta",
-    descricao:
-      "A oOnDemand transformou nossa empresa. Antes, o cadastro de ordens de pagamento levava 3 minutos e era repetido 1500 vezes por mês. Com a automação, reduzimos essa tarefa para um clique, economizando 4500 minutos, ou 75 horas, mensais.Essa mudança liberou um funcionário para atividades estratégicas, otimizando nosso fluxo de trabalho e melhorando nossa eficiência. A agilidade proporcionada pela oOnDemand trouxe benefícios significativos para nossa operação.",
-    imagem: "/testemunhos1.png", // Caminho relativo correto
-  },
-  {
-    titulo: "75 horas economizadas com apenas um clique.",
-    nome: "Pitter SobreNome",
-    cargo: "Cargo - Vitta",
-    descricao:
-      "A oOnDemand transformou nossa empresa. Antes, o cadastro de ordens de pagamento levava 3 minutos e era repetido 1500 vezes por mês. Com a automação, reduzimos essa tarefa para um clique, economizando 4500 minutos, ou 75 horas, mensais.Essa mudança liberou um funcionário para atividades estratégicas, otimizando nosso fluxo de trabalho e melhorando nossa eficiência. A agilidade proporcionada pela oOnDemand trouxe benefícios significativos para nossa operação.",
-    imagem: "/testemunhos1.png", // Caminho relativo correto
-  },
-  {
-    titulo: "75 horas economizadas com apenas um clique.",
-    nome: "Pitter SobreNome",
-    cargo: "Cargo - Vitta",
-    descricao:
-      "A oOnDemand transformou nossa empresa. Antes, o cadastro de ordens de pagamento levava 3 minutos e era repetido 1500 vezes por mês. Com a automação, reduzimos essa tarefa para um clique, economizando 4500 minutos, ou 75 horas, mensais.Essa mudança liberou um funcionário para atividades estratégicas, otimizando nosso fluxo de trabalho e melhorando nossa eficiência. A agilidade proporcionada pela oOnDemand trouxe benefícios significativos para nossa operação.",
-    imagem: "/testemunhos1.png", // Caminho relativo correto
-  },
-];
+import TestemunhoModulo from "../TestemunhoModulo"; // Importe o componente TestemunhoModulo
 
 const responsive = {
   superLargeDesktop: {
-    breakpoint: { max: 4000, min: 3000 },
-    items: 1,
+    breakpoint: { max: 4000, min: 2000 },
+    items: 4,
   },
   desktop: {
-    breakpoint: { max: 3000, min: 1024 },
-    items: 1,
+    breakpoint: { max: 2000, min: 1024 },
+    items: 3,
   },
   tablet: {
     breakpoint: { max: 1024, min: 464 },
-    items: 1,
+    items: 2,
   },
   mobile: {
     breakpoint: { max: 464, min: 0 },
@@ -88,110 +22,63 @@ const responsive = {
   },
 };
 
+const testemunhos = [
+  {
+    titulo: "Teste Sob Demanda",
+    descricao: "Seu desejo é uma ordem! Você só paga pelo tempo otimizado!",
+    imagem: "/carrossel1.png",
+    nome: "Nome 1",
+    cargo: "Cargo 1",
+  },
+  {
+    titulo: "Outro Testemunho",
+    descricao: "Descrição do segundo testemunho.",
+    imagem: "/carrossel2.png",
+    nome: "Nome 2",
+    cargo: "Cargo 2",
+  },
+  {
+    titulo: "Mais um Testemunho",
+    descricao: "Descrição do terceiro testemunho.",
+    imagem: "/carrossel3.png",
+    nome: "Nome 3",
+    cargo: "Cargo 3",
+  },
+  {
+    titulo: "Testemunho Adicional",
+    descricao: "Descrição do quarto testemunho.",
+    imagem: "/carrossel4.png",
+    nome: "Nome 4",
+    cargo: "Cargo 4",
+  },
+  // Adicione mais testemunhos conforme necessário
+];
+
 const Testemunhos = () => {
-  const [goToSlide, setGoToSlide] = useState(0);
-  const [offsetRadius, setOffsetRadius] = useState(2);
-  const [showNavigation, setShowNavigation] = useState(true);
-  const [carouselConfig, setCarouselConfig] = useState(config.gentle);
-  const startX = useRef(0);
-  const endX = useRef(0);
-
-  useEffect(() => {
-    // Verifica se o código está sendo executado no navegador
-    if (typeof window !== "undefined") {
-      // Adiciona o estilo inline ao body para remover a barra de rolagem horizontal
-      document.body.style.overflowX = "hidden";
-
-      // Limpa o estilo ao desmontar o componente
-      return () => {
-        document.body.style.overflowX = "";
-      };
-    }
-  }, []);
-
-  const slides = listaTestemunhos.map((testemunho, index) => ({
-    key: uuidv4(),
-    content: (
-      <div
-        style={{
-          transition: "transform 0.5s ease",
-          transform:
-            goToSlide === index
-              ? "scale(1) translateX(0)"
-              : index < goToSlide
-              ? "scale(1.5) translateX(-650px)"
-              : "scale(1.5) translateX(650px)",
-          opacity: goToSlide === index ? 1 : 0.5,
-          zIndex: goToSlide === index ? 1 : 0, // Ajusta o z-index para garantir que o card em evidência fique na frente
-        }}
-      >
-        <TestemunhoModulo testemunho={testemunho} />
-      </div>
-    ),
-    onClick: () => setGoToSlide(index),
-  }));
-
-  const handleMouseDown = (e) => {
-    startX.current = e.clientX;
-  };
-
-  const handleMouseUp = (e) => {
-    endX.current = e.clientX;
-    handleSwipe();
-  };
-
-  const handleTouchStart = (e) => {
-    startX.current = e.touches[0].clientX;
-  };
-
-  const handleTouchEnd = (e) => {
-    endX.current = e.changedTouches[0].clientX;
-    handleSwipe();
-  };
-
-  const handleSwipe = () => {
-    if (startX.current - endX.current > 50) {
-      setGoToSlide((prev) => (prev < slides.length - 1 ? prev + 1 : 0));
-    } else if (endX.current - startX.current > 50) {
-      setGoToSlide((prev) => (prev > 0 ? prev - 1 : slides.length - 1));
-    }
-  };
-
   return (
-    <div className="w-full h-[987.78px] bg-[#00353F] pt-[150px] flex flex-col items-center">
-      <div className="w-full md:w-[1180px] h-[120px] flex justify-center items-center pb-5 px-4 md:px-0">
-        <h1 className="text-white font-montserrat font-medium text-[24px] md:text-[48px] tracking-[-1px] text-center m-0">
-          Testemunhos reais dos clientes que já foram encantados pela teste
-        </h1>
+    <div className="h-[852px] w-auto bg-[#00353F] flex flex-col items-center">
+      <div className="w-full max-w-[1180px] h-[120px] flex items-center justify-center px-4 pt-[150px]">
+        <p className="text-white text-[48px] font-montserrat tracking-[-1px] text-center break-words">
+          Testemunhos reais dos clientes que já foram encantados pela Teste
+        </p>
       </div>
-      <div className="w-full max-w-[1180px] flex flex-col items-center mt-20">
-        <div
-          className="w-full"
-          style={{
-            width: "90%",
-            height: "500px",
-            margin: "0 auto",
-            perspective: "1300px", // Adiciona a perspectiva 3D
-            // overflow: "hidden", // Oculta o overflow horizontal
-          }}
-          onMouseDown={handleMouseDown}
-          onMouseUp={handleMouseUp}
-          onTouchStart={handleTouchStart}
-          onTouchEnd={handleTouchEnd}
+      <div className="w-full h-[442px] mt-[100px] pt-[50px] px-4 md:px-8 lg:px-16">
+        <Carousel
+          responsive={responsive}
+          infinite={true}
+          autoPlay={true}
+          autoPlaySpeed={3000}
+          keyBoardControl={true}
+          showDots={true}
+          containerClass="carousel-container"
+          itemClass="px-2" // Use Tailwind para ajustar o padding entre os itens
         >
-          <Carousel
-            slides={slides}
-            goToSlide={goToSlide}
-            offsetRadius={offsetRadius}
-            showNavigation={showNavigation}
-            animationConfig={carouselConfig}
-            style={{ transformStyle: "preserve-3d" }} // Adiciona o estilo de transformação 3D
-          />
-        </div>
-        <div className="flex justify-center mt-10">
-          <CustomLeftArrow onClick={() => setGoToSlide(goToSlide - 1)} />
-          <CustomRightArrow onClick={() => setGoToSlide(goToSlide + 1)} />
-        </div>
+          {testemunhos.map((testemunho, index) => (
+            <div key={index} className="px-2">
+              <TestemunhoModulo testemunho={testemunho} />
+            </div>
+          ))}
+        </Carousel>
       </div>
     </div>
   );

@@ -33,7 +33,7 @@ const CarrosselBanner = () => {
             type="button"
             onClick={onClickHandler}
             title={label}
-            className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-[#00E2F4] w-[48.59px] h-[39.39px] flex justify-center items-center rounded-full z-10"
+            className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-[#00E2F4] w-12 h-10 flex justify-center items-center rounded-full z-10"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -58,7 +58,7 @@ const CarrosselBanner = () => {
             type="button"
             onClick={onClickHandler}
             title={label}
-            className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-[#00E2F4] w-[48.59px] h-[39.39px] flex justify-center items-center rounded-full z-10"
+            className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-[#00E2F4] w-12 h-10 flex justify-center items-center rounded-full z-10"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -85,10 +85,10 @@ const CarrosselBanner = () => {
           alt="Carrossel 1"
           layout="fill"
           objectFit="cover"
-          objectPosition="center"
-          className="w-full h-full md:h-auto"
+          objectPosition="center md:center lg:center 2xl:top-right"
+          className="w-full h-full md:h-auto 2xl:object-[top_right]"
         />
-        <div className="absolute top-1/2 left-4 md:left-20 lg:left-44 transform -translate-y-1/2 text-white text-[16px] md:text-[24px] lg:text-[48px] font-extrabold md:text-left text-center w-full md:w-auto">
+        <div className="absolute top-1/2 left-4 md:left-20 lg:left-44 transform -translate-y-1/2 text-white text-[20px] md:text-[24px] lg:text-[48px] font-extrabold md:text-left text-center w-full md:w-auto">
           <div className="mb-[1px]">
             Teste Sob
             <br className="mb-[0.5px]" />
@@ -98,10 +98,10 @@ const CarrosselBanner = () => {
             <br className="mb-[0.5px]" />
             pagamento
             <br className="mb-[30px]" />
-            <div className="font-normal text-[12px] md:text-[16px] lg:text-[24px] leading-none">
+            <div className="font-normal text-[16px] md:text-[16px] lg:text-[24px] leading-none">
               Seu desejo é uma ordem! Você só
               <div className="mt-[20px]">paga pelo tempo otimizado!</div>
-              <button className="mt-[20px] md:mt-[40px] lg:mt-[60px] w-[150px] md:w-[200px] lg:w-[292px] h-[30px] md:h-[40px] lg:h-[48px] bg-[#00E2F4] border border-[#6EDFF6] text-[#001E27] text-[12px] md:text-[16px] lg:text-[20px] font-bold rounded-[10px] hover:bg-[#00c2d4] active:transform active:scale-95 transition-transform">
+              <button className="mt-[20px] md:mt-[40px] lg:mt-[60px] w-[150px] md:w-[200px] lg:w-[292px] h-[30px] md:h-[40px] lg:h-[48px] bg-[#00E2F4] border border-[#6EDFF6] text-[#001E27] text-[14px] md:text-[16px] lg:text-[20px] font-bold rounded-[10px] hover:bg-[#00c2d4] active:transform active:scale-95 transition-transform">
                 Conheça nossos truques
               </button>
             </div>
@@ -114,10 +114,10 @@ const CarrosselBanner = () => {
           alt="Carrossel 2"
           layout="fill"
           objectFit="cover"
-          objectPosition="center"
-          className="w-full h-full md:h-auto"
+          objectPosition="center md:center lg:center 2xl:top-right"
+          className="w-full h-full md:h-auto 2xl:object-[top_right]"
         />
-        <div className="absolute top-1/2 left-4 md:left-20 lg:left-44 transform -translate-y-1/2 text-white text-[16px] md:text-[24px] lg:text-[48px] font-extrabold md:text-left text-center w-full md:w-auto">
+        <div className="absolute top-1/2 left-4 md:left-20 lg:left-44 transform -translate-y-1/2 text-white text-[20px] md:text-[24px] lg:text-[48px] font-extrabold md:text-left text-center w-full md:w-auto">
           <div className="mb-[1px]">
             Teste Sob
             <br className="mb-[0.5px]" />
@@ -127,10 +127,10 @@ const CarrosselBanner = () => {
             <br className="mb-[0.5px]" />
             pagamento
             <br className="mb-[30px]" />
-            <div className="font-normal text-[12px] md:text-[16px] lg:text-[24px] leading-none">
+            <div className="font-normal text-[16px] md:text-[16px] lg:text-[24px] leading-none">
               Seu desejo é uma ordem! Você só
               <div className="mt-[20px]">paga pelo tempo otimizado!</div>
-              <button className="mt-[20px] md:mt-[40px] lg:mt-[60px] w-[150px] md:w-[200px] lg:w-[292px] h-[30px] md:h-[40px] lg:h-[48px] bg-[#00E2F4] border border-[#6EDFF6] text-[#001E27] text-[12px] md:text-[16px] lg:text-[20px] font-bold rounded-[10px] hover:bg-[#00c2d4] active:transform active:scale-95 transition-transform">
+              <button className="mt-[20px] md:mt-[40px] lg:mt-[60px] w-[150px] md:w-[200px] lg:w-[292px] h-[30px] md:h-[40px] lg:h-[48px] bg-[#00E2F4] border border-[#6EDFF6] text-[#001E27] text-[14px] md:text-[16px] lg:text-[20px] font-bold rounded-[10px] hover:bg-[#00c2d4] active:transform active:scale-95 transition-transform">
                 Conheça nossos truques
               </button>
             </div>
@@ -143,10 +143,10 @@ const CarrosselBanner = () => {
           alt="Carrossel 3"
           layout="fill"
           objectFit="cover"
-          objectPosition="center"
-          className="w-full h-full md:h-auto"
+          objectPosition="center md:center lg:center 2xl:top-right"
+          className="w-full h-full md:h-auto 2xl:object-[top_right]"
         />
-        <div className="absolute top-1/2 left-4 md:left-20 lg:left-44 transform -translate-y-1/2 text-white text-[16px] md:text-[24px] lg:text-[48px] font-extrabold md:text-left text-center w-full md:w-auto">
+        <div className="absolute top-1/2 left-4 md:left-20 lg:left-44 transform -translate-y-1/2 text-white text-[20px] md:text-[24px] lg:text-[48px] font-extrabold md:text-left text-center w-full md:w-auto">
           <div className="mb-[1px]">
             Teste Sob
             <br className="mb-[0.5px]" />
@@ -156,10 +156,10 @@ const CarrosselBanner = () => {
             <br className="mb-[0.5px]" />
             pagamento
             <br className="mb-[30px]" />
-            <div className="font-normal text-[12px] md:text-[16px] lg:text-[24px] leading-none">
+            <div className="font-normal text-[16px] md:text-[16px] lg:text-[24px] leading-none">
               Seu desejo é uma ordem! Você só
               <div className="mt-[20px]">paga pelo tempo otimizado!</div>
-              <button className="mt-[20px] md:mt-[40px] lg:mt-[60px] w-[150px] md:w-[200px] lg:w-[292px] h-[30px] md:h-[40px] lg:h-[48px] bg-[#00E2F4] border border-[#6EDFF6] text-[#001E27] text-[12px] md:text-[16px] lg:text-[20px] font-bold rounded-[10px] hover:bg-[#00c2d4] active:transform active:scale-95 transition-transform">
+              <button className="mt-[20px] md:mt-[40px] lg:mt-[60px] w-[150px] md:w-[200px] lg:w-[292px] h-[30px] md:h-[40px] lg:h-[48px] bg-[#00E2F4] border border-[#6EDFF6] text-[#001E27] text-[14px] md:text-[16px] lg:text-[20px] font-bold rounded-[10px] hover:bg-[#00c2d4] active:transform active:scale-95 transition-transform">
                 Conheça nossos truques
               </button>
             </div>
