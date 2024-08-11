@@ -117,7 +117,7 @@ const CardsProdutos = () => {
     : listaModulos;
 
   return (
-    <section className="w-full bg-[#001E27] flex items-center justify-center py-8 md:py-12 lg:py-20">
+    <section className="bg-[#001E27] flex items-center justify-center py-8 md:py-12 lg:py-20">
       <div className="w-full lg:w-[1071px] h-auto lg:h-[1551px] bg-[#001E27] mx-auto pt-[20px]">
         <h2 className="text-[#00E2F4] font-montserrat font-bold text-[18px] tracking-[0.2px] text-center lg:text-left">
           Categorias
