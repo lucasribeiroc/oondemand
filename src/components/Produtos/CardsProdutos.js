@@ -39,7 +39,75 @@ const CardsProdutos = () => {
         "Gerencia múltiplas moedas e automatiza processos financeiros.",
       imagem: "/modulos1.png", // Caminho relativo correto
     },
-    // Outros módulos...
+    {
+      titulo: "Precisa gerenciar múltiplas moedas com eficiência?",
+      tituloProdModal:
+        "Transforme Sua Emissão de Notas Fiscais com a Integração: OMIE>Arquivei",
+      nome: "Módulo Invoice OS",
+      categoria: "Fiscal",
+      tempo: [
+        <AiFillClockCircle />,
+        <AiFillClockCircle />,
+        <AiFillClockCircle />,
+        <AiFillClockCircle />,
+        <AiOutlineClockCircle />,
+      ], // Array de ícones
+      lista: [
+        "Automatização Completa",
+        "Redução de Erros",
+        "Economia de Tempo",
+        "Conformidade e Segurança",
+      ],
+      descricao:
+        "Gerencia múltiplas moedas e automatiza processos financeiros.",
+      imagem: "/modulos1.png", // Caminho relativo correto
+    },
+    {
+      titulo: "Precisa gerenciar múltiplas moedas com eficiência?",
+      tituloProdModal:
+        "Transforme Sua Emissão de Notas Fiscais com a Integração: OMIE>Arquivei",
+      nome: "Módulo Invoice OS",
+      categoria: "Fiscal",
+      tempo: [
+        <AiFillClockCircle />,
+        <AiFillClockCircle />,
+        <AiFillClockCircle />,
+        <AiFillClockCircle />,
+        <AiOutlineClockCircle />,
+      ], // Array de ícones
+      lista: [
+        "Automatização Completa",
+        "Redução de Erros",
+        "Economia de Tempo",
+        "Conformidade e Segurança",
+      ],
+      descricao:
+        "Gerencia múltiplas moedas e automatiza processos financeiros.",
+      imagem: "/modulos1.png", // Caminho relativo correto
+    },
+    {
+      titulo: "Precisa gerenciar múltiplas moedas com eficiência?",
+      tituloProdModal:
+        "Transforme Sua Emissão de Notas Fiscais com a Integração: OMIE>Arquivei",
+      nome: "Módulo Invoice OS",
+      categoria: "Fiscal",
+      tempo: [
+        <AiFillClockCircle />,
+        <AiFillClockCircle />,
+        <AiFillClockCircle />,
+        <AiFillClockCircle />,
+        <AiOutlineClockCircle />,
+      ], // Array de ícones
+      lista: [
+        "Automatização Completa",
+        "Redução de Erros",
+        "Economia de Tempo",
+        "Conformidade e Segurança",
+      ],
+      descricao:
+        "Gerencia múltiplas moedas e automatiza processos financeiros.",
+      imagem: "/modulos1.png", // Caminho relativo correto
+    },
   ];
 
   const filteredModulos = selectedFilters.length
