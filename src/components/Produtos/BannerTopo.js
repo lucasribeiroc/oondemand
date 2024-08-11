@@ -21,7 +21,7 @@ const BannerTopo = () => {
           </p>
         </div>
         <div className="pt-[20px] md:pt-[30px] lg:pt-[45px] flex justify-center">
-          <button className="w-[150px] md:w-[200px] lg:w-[316px] h-[35px] md:h-[40px] lg:h-[45px] bg-[#6EDFF6] rounded-[4.8px] flex items-center justify-center hover:bg-[#5CC9E0] hover:text-[#E0F7FA]">
+          <button className="w-[150px] md:w-[200px] lg:w-[316px] h-[35px] md:h-[40px] lg:h-[45px] bg-[#6EDFF6] rounded-[4.8px] flex items-center justify-center hover:bg-[#5CC9E0] hover:text-[#E0F7FA] px-2 md:px-4">
             <Image
               src="/whatsapp.png"
               alt="WhatsApp"
@@ -29,7 +29,7 @@ const BannerTopo = () => {
               height={20}
               className="mr-[8px]"
             />
-            <span className="font-montserrat font-bold text-[14px] md:text-[16px] lg:text-[20px] text-white">
+            <span className="font-montserrat font-bold text-[12px] md:text-[16px] lg:text-[20px] text-white">
               Falar com um consultor
             </span>
           </button>
