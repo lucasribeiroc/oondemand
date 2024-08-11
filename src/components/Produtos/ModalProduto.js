@@ -28,7 +28,9 @@ const ModalProduto = ({ modulo, closeModal }) => {
                   Operando em até 7 dias
                 </span>
               </div>
-              <div className="flex justify-center mt-4">{modulo.imagem}</div>
+              <div className="flex justify-center mt-4">
+                {<img src="/imagem-modal.png" alt="Imagem Modal" />}
+              </div>
             </div>
             <div className="mt-[30px]">
               <span className="ml-[70px] font-montserrat text-[32px] text-[#f5f5f5]">
