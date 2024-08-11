@@ -10,7 +10,7 @@ const Faq = () => {
 
   return (
     <div className="w-full h-auto bg-[#001E27] p-4 md:p-8 lg:p-16">
-      <div className="text-center pt-20 md:pt-40">
+      <div className="text-center pt-10 md:pt-20">
         <p className="font-poppins font-bold text-[24px] md:text-[36px] lg:text-[48px] text-[#00e2f4] inline">
           Sua primeira vez
         </p>
