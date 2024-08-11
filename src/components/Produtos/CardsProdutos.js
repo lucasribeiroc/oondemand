@@ -17,18 +17,19 @@ const CardsProdutos = () => {
 
   const listaModulos = [
     {
+      id: 1, // Adicionando uma chave única
       titulo: "Precisa gerenciar múltiplas moedas com eficiência?",
       tituloProdModal:
         "Transforme Sua Emissão de Notas Fiscais com a Integração: OMIE>Arquivei",
       nome: "Módulo Invoice OS",
       categoria: "Fiscal",
       tempo: [
-        <AiFillClockCircle />,
-        <AiFillClockCircle />,
-        <AiFillClockCircle />,
-        <AiFillClockCircle />,
-        <AiOutlineClockCircle />,
-      ], // Array de ícones
+        <AiFillClockCircle key="1" />,
+        <AiFillClockCircle key="2" />,
+        <AiFillClockCircle key="3" />,
+        <AiFillClockCircle key="4" />,
+        <AiOutlineClockCircle key="5" />,
+      ], // Array de ícones com keys
       lista: [
         "Automatização Completa",
         "Redução de Erros",
@@ -40,18 +41,19 @@ const CardsProdutos = () => {
       imagem: "/modulos1.png", // Caminho relativo correto
     },
     {
+      id: 2, // Adicionando uma chave única
       titulo: "Precisa gerenciar múltiplas moedas com eficiência?",
       tituloProdModal:
         "Transforme Sua Emissão de Notas Fiscais com a Integração: OMIE>Arquivei",
       nome: "Módulo Invoice OS",
       categoria: "Fiscal",
       tempo: [
-        <AiFillClockCircle />,
-        <AiFillClockCircle />,
-        <AiFillClockCircle />,
-        <AiFillClockCircle />,
-        <AiOutlineClockCircle />,
-      ], // Array de ícones
+        <AiFillClockCircle key="1" />,
+        <AiFillClockCircle key="2" />,
+        <AiFillClockCircle key="3" />,
+        <AiFillClockCircle key="4" />,
+        <AiOutlineClockCircle key="5" />,
+      ], // Array de ícones com keys
       lista: [
         "Automatização Completa",
         "Redução de Erros",
@@ -63,18 +65,19 @@ const CardsProdutos = () => {
       imagem: "/modulos1.png", // Caminho relativo correto
     },
     {
+      id: 3, // Adicionando uma chave única
       titulo: "Precisa gerenciar múltiplas moedas com eficiência?",
       tituloProdModal:
         "Transforme Sua Emissão de Notas Fiscais com a Integração: OMIE>Arquivei",
       nome: "Módulo Invoice OS",
       categoria: "Fiscal",
       tempo: [
-        <AiFillClockCircle />,
-        <AiFillClockCircle />,
-        <AiFillClockCircle />,
-        <AiFillClockCircle />,
-        <AiOutlineClockCircle />,
-      ], // Array de ícones
+        <AiFillClockCircle key="1" />,
+        <AiFillClockCircle key="2" />,
+        <AiFillClockCircle key="3" />,
+        <AiFillClockCircle key="4" />,
+        <AiOutlineClockCircle key="5" />,
+      ], // Array de ícones com keys
       lista: [
         "Automatização Completa",
         "Redução de Erros",
@@ -86,18 +89,19 @@ const CardsProdutos = () => {
       imagem: "/modulos1.png", // Caminho relativo correto
     },
     {
+      id: 4, // Adicionando uma chave única
       titulo: "Precisa gerenciar múltiplas moedas com eficiência?",
       tituloProdModal:
         "Transforme Sua Emissão de Notas Fiscais com a Integração: OMIE>Arquivei",
       nome: "Módulo Invoice OS",
       categoria: "Fiscal",
       tempo: [
-        <AiFillClockCircle />,
-        <AiFillClockCircle />,
-        <AiFillClockCircle />,
-        <AiFillClockCircle />,
-        <AiOutlineClockCircle />,
-      ], // Array de ícones
+        <AiFillClockCircle key="1" />,
+        <AiFillClockCircle key="2" />,
+        <AiFillClockCircle key="3" />,
+        <AiFillClockCircle key="4" />,
+        <AiOutlineClockCircle key="5" />,
+      ], // Array de ícones com keys
       lista: [
         "Automatização Completa",
         "Redução de Erros",
@@ -139,8 +143,8 @@ const CardsProdutos = () => {
         </div>
         <hr className="w-full border-t border-white mt-4" />
         <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 justify-items-center lg:justify-items-start">
-          {filteredModulos.map((modulo, index) => (
-            <CardPageProdutos key={index} modulo={modulo} />
+          {filteredModulos.map((modulo) => (
+            <CardPageProdutos key={modulo.id} modulo={modulo} />
           ))}
         </div>
       </div>
