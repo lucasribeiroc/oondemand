@@ -38,7 +38,7 @@ const Clientes = () => {
           <img
             src="/clientes3.png"
             alt="Cliente 3"
-            className="block mx-auto" // Centraliza a imagem e define o tamanho
+            className="block mx-auto h-[79px]" // Centraliza a imagem e define o tamanho
           />
         </div>
       </div>
