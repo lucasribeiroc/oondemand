@@ -22,13 +22,41 @@ const ModalProduto = ({ modulo, closeModal }) => {
             </div>
           </div>
           <div className="w-[1086px] h-[586px] bg-[#002731] rounded-[20px] flex items-start justify-start mb-[50px] mx-auto">
-            <div className="w-[488px] h-[441px] bg-[#001E27] ml-[30px] mt-[30px]">
-              <div className="w-[204px] h-[25px] bg-[#00E2F4] rounded-bl-[15px] rounded-tr-[15px] flex items-center justify-center mt-[20px] ml-[20px]">
-                <span className="font-montserrat font-medium text-[14px] tracking-[0.2px] text-[#001E27]">
+            <div className="w-[488px] h-[441px] bg-[#00353F] ml-[30px] mt-[30px] rounded-[10px]">
+              <div className="w-[204px] h-[25px] bg-[#00E2F4] rounded-bl-[15px] rounded-tr-[15px] flex items-center justify-center mt-[15px] ml-[20px]">
+                <span className="font-montserrat font-semibold text-[14px] tracking-[0.2px] text-[#001E27]">
                   Operando em até 7 dias
                 </span>
               </div>
-              {/* Conteúdo adicional pode ser adicionado aqui */}
+              <div className="flex justify-center mt-4">
+                <img src="/imagem-modal.png" alt="Imagem Modal" />
+              </div>
+            </div>
+            <div className="mt-[30px]">
+              <span className="ml-[70px] font-montserrat text-[32px] text-[#f5f5f5]">
+                {modulo.nome}
+              </span>
+              <div className="ml-[70px] mt-[20px]">
+                <span className="font-inter text-[18px] text-[#f5f5f5]">
+                  {modulo.descricao}
+                </span>
+              </div>
+              <div className="mt-[20px]">
+                <span className="ml-[70px] font-inter text-[30px] text-[#00E2F4] flex gap-2">
+                  {modulo.tempo.map((icon, index) => (
+                    <span key={index}>{icon}</span>
+                  ))}
+                </span>
+              </div>
+              <div className="mt-[20px] ml-[70px]">
+                <ul className="font-inter text-[18px] font-light text-[#f5f5f5] flex flex-col gap-2 list-disc pl-0">
+                  {modulo.lista.map((item, index) => (
+                    <li key={index} className="ml-[25px]">
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </div>
         </div>
