@@ -1,4 +1,4 @@
-import React from "react";
+import Image from "next/image";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -77,45 +77,57 @@ const CarrosselTecnologias = () => {
             ]}
           >
             <div className="px-5">
-              <img
-                src="partner1.png"
+              <Image
+                src="/partner1.png"
                 alt="Partner 1"
                 className="h-auto mx-5 max-h-[100px] md:max-h-[150px]"
+                width={150}
+                height={100}
               />
             </div>
             <div className="px-0">
-              <img
-                src="partner2.png"
+              <Image
+                src="/partner2.png"
                 alt="Partner 2"
                 className="h-auto mx-5 max-h-[100px] md:max-h-[150px]"
+                width={150}
+                height={100}
               />
             </div>
             <div className="px-0">
-              <img
-                src="partner3.png"
+              <Image
+                src="/partner3.png"
                 alt="Partner 3"
                 className="h-auto mx-5 max-h-[100px] md:max-h-[150px]"
+                width={150}
+                height={100}
               />
             </div>
             <div className="px-0">
-              <img
-                src="partner4.png"
+              <Image
+                src="/partner4.png"
                 alt="Partner 4"
                 className="h-auto mx-5 max-h-[100px] md:max-h-[150px]"
+                width={150}
+                height={100}
               />
             </div>
             <div className="px-0">
-              <img
-                src="partner5.png"
+              <Image
+                src="/partner5.png"
                 alt="Partner 5"
                 className="h-auto mx-5 max-h-[100px] md:max-h-[150px]"
+                width={150}
+                height={100}
               />
             </div>
             <div className="px-0">
-              <img
-                src="partner6.png"
+              <Image
+                src="/partner6.png"
                 alt="Partner 6"
                 className="h-auto mx-5 max-h-[100px] md:max-h-[150px] w-auto"
+                width={150}
+                height={100}
               />
             </div>
           </Slider>
