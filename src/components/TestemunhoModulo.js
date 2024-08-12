@@ -1,4 +1,4 @@
-import React from "react";
+import Image from "next/image";
 
 const TestemunhoModulo = ({ testemunho }) => {
   return (
@@ -16,10 +16,12 @@ const TestemunhoModulo = ({ testemunho }) => {
             </p>
           </div>
           <div className="absolute bottom-0 left-[50%] transform -translate-x-1/2 translate-y-[50%] w-[87px] h-[87px] flex items-center justify-center overflow-visible">
-            <img
+            <Image
               src={testemunho.imagem}
               alt="Testemunho"
               className="w-[87px] h-[87px] rounded-full object-cover"
+              width={87}
+              height={87}
             />
           </div>
         </div>
@@ -28,10 +30,12 @@ const TestemunhoModulo = ({ testemunho }) => {
             {testemunho.nome}
           </p>
           <div className="absolute top-0 left-[50%] transform -translate-x-1/2 -translate-y-[50%] w-[87px] h-[87px] flex items-center justify-center overflow-visible">
-            <img
+            <Image
               src={testemunho.imagem}
               alt="Testemunho"
               className="w-[87px] h-[87px] rounded-full object-cover"
+              width={87}
+              height={87}
             />
           </div>
         </div>
