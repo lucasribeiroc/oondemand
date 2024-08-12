@@ -5,7 +5,7 @@ import { AiOutlineClockCircle, AiOutlineDollar } from "react-icons/ai"; // Impor
 const ModalProduto = ({ modulo, closeModal }) => {
   return (
     <div className="fixed inset-0 flex items-center justify-center z-50 p-4 md:p-8">
-      <div className="w-full max-w-[1266px] h-auto max-h-[calc(100vh-4rem)] overflow-y-auto rounded-2xl border border-[#808e93] bg-[#001E27] text-white">
+      <div className="w-full max-w-[1266px] h-auto max-h-[calc(100vh-4rem)] overflow-y-auto rounded-2xl border border-[#808e93] bg-[#001E27] text-white scrollbar-thin scrollbar-thumb-[#00E2f4] scrollbar-track-[#00353f]">
         <div className="sticky top-0 flex justify-between items-center p-4 border-b border-[#808e93] bg-[#001E27] z-10 rounded-t-2xl">
           <h2 className="text-[12px] sm:text-[14px] md:text-[16px] lg:text-[20px] text-[#F5F5F5] font-montserrat">
             Detalhe do produto
@@ -130,6 +130,81 @@ const ModalProduto = ({ modulo, closeModal }) => {
             />
             Falar com um consultor
           </button>
+          <div className="w-full max-w-[1086px] bg-[#00353f] bg-opacity-40 mt-[60px] mx-auto pt-[30px] pl-[50px] pr-[50px] rounded-[10px]">
+            <h3 className="text-left font-inter font-medium text-[24px] text-[#f5f5f5]">
+              Case
+            </h3>
+            <hr className="w-[132px] border-t-2 border-[#00e2f4] mt-5 mb-5" />
+            <p className="text-left font-inter font-normal text-[18px] text-[#f5f5f5] mb-[40px]">
+              {modulo.case}
+            </p>
+          </div>
+          <div className="w-full max-w-[1086px] bg-[#00353f] bg-opacity-40 mt-[60px] mx-auto pt-[30px] pl-[50px] pr-[50px] rounded-[10px]">
+            <h3 className="text-left font-inter font-medium text-[24px] text-[#f5f5f5]">
+              Funcionalidades
+            </h3>
+            <hr className="w-[132px] border-t-2 border-[#00e2f4] mt-5 mb-5" />
+            <ol className="list-decimal pl-5 text-left font-inter font-normal text-[18px] text-[#f5f5f5] mb-[50px]">
+              {modulo.funcionalidadesTitulo.map((titulo, index) => (
+                <li key={index} className="mb-2">
+                  {titulo}
+                  <ul className="list-disc pl-5 mt-2">
+                    {modulo.funcionalidadesDescricao[index].map(
+                      (descricao, descIndex) => (
+                        <li
+                          key={descIndex}
+                          className="text-left font-inter font-normal text-[18px] text-[#f5f5f5]"
+                        >
+                          {descricao}
+                        </li>
+                      )
+                    )}
+                  </ul>
+                </li>
+              ))}
+            </ol>
+          </div>
+          <div className="w-full max-w-[1086px] bg-[#00353f] bg-opacity-40 mt-[60px] mx-auto pt-[30px] pl-[50px] pr-[50px] rounded-[10px]">
+            <h3 className="text-left font-inter font-medium text-[24px] text-[#f5f5f5]">
+              Benefícios
+            </h3>
+            <hr className="w-[132px] border-t-2 border-[#00e2f4] mt-5 mb-5" />
+            <p className="text-left font-inter font-normal text-[18px] text-[#f5f5f5] mb-[40px]">
+              <ol className="list-decimal pl-5 mt-5">
+                {modulo.beneficiosTitulo.map((titulo, index) => (
+                  <li key={index} className="mb-2">
+                    {titulo}
+                    <ul className="list-disc pl-5 mt-2">
+                      {modulo.beneficiosDescricao[index].map(
+                        (descricao, descIndex) => (
+                          <li
+                            key={descIndex}
+                            className="text-left font-inter font-normal text-[18px] text-[#f5f5f5]"
+                          >
+                            {descricao}
+                          </li>
+                        )
+                      )}
+                    </ul>
+                  </li>
+                ))}
+              </ol>
+            </p>
+          </div>
+          <div className="w-full max-w-[1086px] bg-[#00353f] bg-opacity-40 mt-[60px] mx-auto pt-[30px] pl-[50px] pr-[50px] rounded-[10px] pb-[40px]">
+            <h3 className="text-left font-inter font-medium text-[24px] text-[#f5f5f5]">
+              Dependências
+            </h3>
+            <hr className="w-[132px] border-t-2 border-[#00e2f4] mt-5 mb-5" />
+            <p className="text-left font-inter font-normal text-[18px] text-[#f5f5f5] mb-[40px]">
+              {modulo.dependenciasTitulo}
+            </p>
+            <ul className="list-disc pl-5 text-left font-inter font-normal text-[18px] text-[#f5f5f5]">
+              {modulo.dependenciasItens.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
     </div>

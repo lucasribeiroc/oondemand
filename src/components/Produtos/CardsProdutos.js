@@ -42,6 +42,60 @@ const CardsProdutos = () => {
       mensalidade: "R$ 120,00/MÊS",
       horasPoupadas: "75 horas/mês",
       valorPoupado: "R$ 5000,00/mês",
+      case: "A GS Golveia enfrentava desafios com erros na emissão manual de notas fiscais, resultando em protestos e complicações financeiras. Com a implementação do Módulo de Integração com Arquivei, a empresa automatizou a captura e gestão de notas fiscais, eliminando erros de digitação e garantindo conformidade fiscal. A solução trouxe uma significativa economia de tempo e recursos, melhorando o controle financeiro e permitindo que a equipe focasse em atividades estratégicas. A GS Golveia agora desfruta de processos fiscais mais eficientes e confiáveis.",
+      funcionalidadesTitulo: [
+        "Cadastro Automático de Ordens de Serviço:",
+        "Integração de Dados:",
+        "Geração de Adiantamentos:",
+      ],
+      funcionalidadesDescricao: [
+        [
+          "Cadastra automaticamente a Ordem de Serviço (OS) no Omie conforme o contrato aprovado no Zoho.",
+          "Anexa o PDF do contrato à OS gerada, garantindo rastreabilidade e fácil acesso aos documentos importantes.",
+        ],
+        [
+          "Mapeamento do projeto da OS com o negócio do Zoho e do departamento da OS com o território.",
+          "Criação automática de clientes no Omie caso não estejam cadastrados, utilizando as informações do Zoho.",
+        ],
+        [
+          "Gera adiantamentos de contas a receber, facilitando o controle financeiro e o fluxo de caixa",
+        ],
+      ],
+      beneficiosTitulo: [
+        "Benefícios:",
+        "Redução de Erros:",
+        "Economia de Tempo",
+        "Conformidade e Segurança",
+        "Facilidade de Uso",
+      ],
+      beneficiosDescricao: [
+        [
+          "Automatização Completa: Captura automática de NFs emitidas e recebidas. Validação instantânea das informações fiscais.",
+        ],
+        [
+          "Eliminação de erros manuais comuns. Redução de multas e penalidades devido a erros fiscais.",
+        ],
+        [
+          "Processo de emissão e arquivamento automatizado",
+          "Implementação rápida e eficiente em até 7 dias.",
+        ],
+        [
+          "Garantia de conformidade com as regulamentações fiscais.",
+          "Armazenamento seguro e acesso fácil aos documentos.",
+        ],
+        [
+          "Interface amigável e intuitiva.",
+          "Suporte técnico especializado disponível.",
+        ],
+      ],
+      dependenciasTitulo:
+        "Para o funcionamento do Módulo de Integração com Arquivei, são necessários:",
+      dependenciasItens: [
+        "App Host",
+        "App Omie",
+        "Módulo de Autenticação",
+        "Módulo Anexo Omie",
+      ],
       imagem: "/modulos1.png", // Caminho relativo correto
     },
     {
@@ -67,9 +121,63 @@ const CardsProdutos = () => {
       descricao:
         "Gerencia múltiplas moedas e automatiza processos financeiros.",
       ativacao: "R$ 4.500,00",
-      mensalidade: " R$120,00/MÊS",
+      mensalidade: "R$ 120,00/MÊS",
       horasPoupadas: "75 horas/mês",
       valorPoupado: "R$ 5000,00/mês",
+      case: "A GS Golveia enfrentava desafios com erros na emissão manual de notas fiscais, resultando em protestos e complicações financeiras. Com a implementação do Módulo de Integração com Arquivei, a empresa automatizou a captura e gestão de notas fiscais, eliminando erros de digitação e garantindo conformidade fiscal. A solução trouxe uma significativa economia de tempo e recursos, melhorando o controle financeiro e permitindo que a equipe focasse em atividades estratégicas. A GS Golveia agora desfruta de processos fiscais mais eficientes e confiáveis.",
+      funcionalidadesTitulo: [
+        "Cadastro Automático de Ordens de Serviço:",
+        "Integração de Dados:",
+        "Geração de Adiantamentos:",
+      ],
+      funcionalidadesDescricao: [
+        [
+          "Cadastra automaticamente a Ordem de Serviço (OS) no Omie conforme o contrato aprovado no Zoho.",
+          "Anexa o PDF do contrato à OS gerada, garantindo rastreabilidade e fácil acesso aos documentos importantes.",
+        ],
+        [
+          "Mapeamento do projeto da OS com o negócio do Zoho e do departamento da OS com o território.",
+          "Criação automática de clientes no Omie caso não estejam cadastrados, utilizando as informações do Zoho.",
+        ],
+        [
+          "Gera adiantamentos de contas a receber, facilitando o controle financeiro e o fluxo de caixa",
+        ],
+      ],
+      beneficiosTitulo: [
+        "Benefícios:",
+        "Redução de Erros:",
+        "Economia de Tempo",
+        "Conformidade e Segurança",
+        "Facilidade de Uso",
+      ],
+      beneficiosDescricao: [
+        [
+          "Automatização Completa: Captura automática de NFs emitidas e recebidas. Validação instantânea das informações fiscais.",
+        ],
+        [
+          "Eliminação de erros manuais comuns. Redução de multas e penalidades devido a erros fiscais.",
+        ],
+        [
+          "Processo de emissão e arquivamento automatizado",
+          "Implementação rápida e eficiente em até 7 dias.",
+        ],
+        [
+          "Garantia de conformidade com as regulamentações fiscais.",
+          "Armazenamento seguro e acesso fácil aos documentos.",
+        ],
+        [
+          "Interface amigável e intuitiva.",
+          "Suporte técnico especializado disponível.",
+        ],
+      ],
+      dependenciasTitulo:
+        "Para o funcionamento do Módulo de Integração com Arquivei, são necessários:",
+      dependenciasItens: [
+        "App Host",
+        "App Omie",
+        "Módulo de Autenticação",
+        "Módulo Anexo Omie",
+      ],
       imagem: "/modulos1.png", // Caminho relativo correto
     },
     {
@@ -98,6 +206,60 @@ const CardsProdutos = () => {
       mensalidade: "R$ 120,00/MÊS",
       horasPoupadas: "75 horas/mês",
       valorPoupado: "R$ 5000,00/mês",
+      case: "A GS Golveia enfrentava desafios com erros na emissão manual de notas fiscais, resultando em protestos e complicações financeiras. Com a implementação do Módulo de Integração com Arquivei, a empresa automatizou a captura e gestão de notas fiscais, eliminando erros de digitação e garantindo conformidade fiscal. A solução trouxe uma significativa economia de tempo e recursos, melhorando o controle financeiro e permitindo que a equipe focasse em atividades estratégicas. A GS Golveia agora desfruta de processos fiscais mais eficientes e confiáveis.",
+      funcionalidadesTitulo: [
+        "Cadastro Automático de Ordens de Serviço:",
+        "Integração de Dados:",
+        "Geração de Adiantamentos:",
+      ],
+      funcionalidadesDescricao: [
+        [
+          "Cadastra automaticamente a Ordem de Serviço (OS) no Omie conforme o contrato aprovado no Zoho.",
+          "Anexa o PDF do contrato à OS gerada, garantindo rastreabilidade e fácil acesso aos documentos importantes.",
+        ],
+        [
+          "Mapeamento do projeto da OS com o negócio do Zoho e do departamento da OS com o território.",
+          "Criação automática de clientes no Omie caso não estejam cadastrados, utilizando as informações do Zoho.",
+        ],
+        [
+          "Gera adiantamentos de contas a receber, facilitando o controle financeiro e o fluxo de caixa",
+        ],
+      ],
+      beneficiosTitulo: [
+        "Benefícios:",
+        "Redução de Erros:",
+        "Economia de Tempo",
+        "Conformidade e Segurança",
+        "Facilidade de Uso",
+      ],
+      beneficiosDescricao: [
+        [
+          "Automatização Completa: Captura automática de NFs emitidas e recebidas. Validação instantânea das informações fiscais.",
+        ],
+        [
+          "Eliminação de erros manuais comuns. Redução de multas e penalidades devido a erros fiscais.",
+        ],
+        [
+          "Processo de emissão e arquivamento automatizado",
+          "Implementação rápida e eficiente em até 7 dias.",
+        ],
+        [
+          "Garantia de conformidade com as regulamentações fiscais.",
+          "Armazenamento seguro e acesso fácil aos documentos.",
+        ],
+        [
+          "Interface amigável e intuitiva.",
+          "Suporte técnico especializado disponível.",
+        ],
+      ],
+      dependenciasTitulo:
+        "Para o funcionamento do Módulo de Integração com Arquivei, são necessários:",
+      dependenciasItens: [
+        "App Host",
+        "App Omie",
+        "Módulo de Autenticação",
+        "Módulo Anexo Omie",
+      ],
       imagem: "/modulos1.png", // Caminho relativo correto
     },
     {
@@ -126,6 +288,60 @@ const CardsProdutos = () => {
       mensalidade: "R$ 120,00/MÊS",
       horasPoupadas: "75 horas/mês",
       valorPoupado: "R$ 5000,00/mês",
+      case: "A GS Golveia enfrentava desafios com erros na emissão manual de notas fiscais, resultando em protestos e complicações financeiras. Com a implementação do Módulo de Integração com Arquivei, a empresa automatizou a captura e gestão de notas fiscais, eliminando erros de digitação e garantindo conformidade fiscal. A solução trouxe uma significativa economia de tempo e recursos, melhorando o controle financeiro e permitindo que a equipe focasse em atividades estratégicas. A GS Golveia agora desfruta de processos fiscais mais eficientes e confiáveis.",
+      funcionalidadesTitulo: [
+        "Cadastro Automático de Ordens de Serviço:",
+        "Integração de Dados:",
+        "Geração de Adiantamentos:",
+      ],
+      funcionalidadesDescricao: [
+        [
+          "Cadastra automaticamente a Ordem de Serviço (OS) no Omie conforme o contrato aprovado no Zoho.",
+          "Anexa o PDF do contrato à OS gerada, garantindo rastreabilidade e fácil acesso aos documentos importantes.",
+        ],
+        [
+          "Mapeamento do projeto da OS com o negócio do Zoho e do departamento da OS com o território.",
+          "Criação automática de clientes no Omie caso não estejam cadastrados, utilizando as informações do Zoho.",
+        ],
+        [
+          "Gera adiantamentos de contas a receber, facilitando o controle financeiro e o fluxo de caixa",
+        ],
+      ],
+      beneficiosTitulo: [
+        "Benefícios:",
+        "Redução de Erros:",
+        "Economia de Tempo",
+        "Conformidade e Segurança",
+        "Facilidade de Uso",
+      ],
+      beneficiosDescricao: [
+        [
+          "Automatização Completa: Captura automática de NFs emitidas e recebidas. Validação instantânea das informações fiscais.",
+        ],
+        [
+          "Eliminação de erros manuais comuns. Redução de multas e penalidades devido a erros fiscais.",
+        ],
+        [
+          "Processo de emissão e arquivamento automatizado",
+          "Implementação rápida e eficiente em até 7 dias.",
+        ],
+        [
+          "Garantia de conformidade com as regulamentações fiscais.",
+          "Armazenamento seguro e acesso fácil aos documentos.",
+        ],
+        [
+          "Interface amigável e intuitiva.",
+          "Suporte técnico especializado disponível.",
+        ],
+      ],
+      dependenciasTitulo:
+        "Para o funcionamento do Módulo de Integração com Arquivei, são necessários:",
+      dependenciasItens: [
+        "App Host",
+        "App Omie",
+        "Módulo de Autenticação",
+        "Módulo Anexo Omie",
+      ],
       imagem: "/modulos1.png", // Caminho relativo correto
     },
   ];
