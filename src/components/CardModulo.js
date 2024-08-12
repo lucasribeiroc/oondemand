@@ -1,4 +1,4 @@
-import React from "react";
+import Link from "next/link";
 
 const CardModulo = ({ modulo }) => {
   return (
@@ -59,22 +59,24 @@ const CardModulo = ({ modulo }) => {
           </p>
         </div>
         <div style={{ padding: "1rem 0 0 0" }}>
-          <button
-            style={{
-              backgroundColor: "#6EDFF6", // Cor do botão
-              color: "#12191E", // Cor do texto
-              fontWeight: "bold",
-              width: "117px", // Largura do botão
-              height: "38px", // Altura do botão
-              borderRadius: "0.25rem",
-              border: "none",
-              cursor: "pointer",
-            }}
-            onMouseOver={(e) => (e.target.style.backgroundColor = "#1C86EE")}
-            onMouseOut={(e) => (e.target.style.backgroundColor = "#6EDFF6")}
-          >
-            Saiba mais
-          </button>
+          <Link href="/produtos">
+            <button
+              style={{
+                backgroundColor: "#6EDFF6", // Cor do botão
+                color: "#12191E", // Cor do texto
+                fontWeight: "bold",
+                width: "117px", // Largura do botão
+                height: "38px", // Altura do botão
+                borderRadius: "0.25rem",
+                border: "none",
+                cursor: "pointer",
+              }}
+              onMouseOver={(e) => (e.target.style.backgroundColor = "#1C86EE")}
+              onMouseOut={(e) => (e.target.style.backgroundColor = "#6EDFF6")}
+            >
+              Saiba mais
+            </button>
+          </Link>
         </div>
       </div>
     </div>
