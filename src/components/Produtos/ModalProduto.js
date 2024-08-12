@@ -62,7 +62,10 @@ const ModalProduto = ({ modulo, closeModal }) => {
                 <div className="mt-[20px] ml-0 md:ml-[50px]">
                   <ul className="font-inter text-[12px] sm:text-[14px] md:text-[16px] lg:text-[18px] font-light text-[#f5f5f5] flex flex-col gap-2 list-disc pl-0 text-center md:text-left">
                     {modulo.lista.map((item, index) => (
-                      <li key={index} className="ml-0 md:ml-[25px]">
+                      <li
+                        key={index}
+                        className="ml-0 md:ml-[25px] list-inside md:list-outside"
+                      >
                         {item}
                       </li>
                     ))}
