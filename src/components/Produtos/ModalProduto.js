@@ -120,7 +120,7 @@ const ModalProduto = ({ modulo, closeModal }) => {
               </div>
             </div>
           </div>
-          <button className="w-full max-w-[1087px] max-h-[72px] bg-[#37BE4A] text-[#f5f5f5] font-montserrat font-bold text-[16px] md:text-[18px] lg:text-[20px] flex items-center justify-center mt-4 py-2">
+          <button className="w-full max-w-[1087px] max-h-[72px] bg-[#37BE4A] text-[#f5f5f5] font-montserrat font-bold text-[16px] md:text-[18px] lg:text-[20px] flex items-center justify-center mt-0 py-2">
             <Image
               src="/whatsapp.png"
               alt="WhatsApp"
