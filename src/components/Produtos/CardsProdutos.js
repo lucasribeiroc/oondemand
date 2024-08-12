@@ -38,6 +38,10 @@ const CardsProdutos = () => {
       ],
       descricao:
         "Gerencia múltiplas moedas e automatiza processos financeiros.",
+      ativacao: "R$ 4.500,00",
+      mensalidade: "R$ 120,00/MÊS",
+      horasPoupadas: "75 horas/mês",
+      valorPoupado: "R$ 5000,00/mês",
       imagem: "/modulos1.png", // Caminho relativo correto
     },
     {
@@ -62,6 +66,10 @@ const CardsProdutos = () => {
       ],
       descricao:
         "Gerencia múltiplas moedas e automatiza processos financeiros.",
+      ativacao: "R$ 4.500,00",
+      mensalidade: " R$120,00/MÊS",
+      horasPoupadas: "75 horas/mês",
+      valorPoupado: "R$ 5000,00/mês",
       imagem: "/modulos1.png", // Caminho relativo correto
     },
     {
@@ -86,6 +94,10 @@ const CardsProdutos = () => {
       ],
       descricao:
         "Gerencia múltiplas moedas e automatiza processos financeiros.",
+      ativacao: "R$ 4.500,00",
+      mensalidade: "R$ 120,00/MÊS",
+      horasPoupadas: "75 horas/mês",
+      valorPoupado: "R$ 5000,00/mês",
       imagem: "/modulos1.png", // Caminho relativo correto
     },
     {
@@ -110,6 +122,10 @@ const CardsProdutos = () => {
       ],
       descricao:
         "Gerencia múltiplas moedas e automatiza processos financeiros.",
+      ativacao: "R$ 4.500,00",
+      mensalidade: "R$ 120,00/MÊS",
+      horasPoupadas: "75 horas/mês",
+      valorPoupado: "R$ 5000,00/mês",
       imagem: "/modulos1.png", // Caminho relativo correto
     },
   ];

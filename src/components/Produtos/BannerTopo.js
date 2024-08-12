@@ -3,7 +3,7 @@ import Image from "next/image";
 const BannerTopo = () => {
   return (
     <section
-      className="w-full h-auto lg:h-[600px] bg-cover bg-center flex flex-col items-center justify-center py-8 md:py-12 lg:py-20"
+      className="w-full h-auto lg:h-[500px] bg-cover bg-center flex flex-col items-center justify-center py-8 md:py-12 lg:py-20"
       style={{ backgroundImage: "url('/bg-banner-topo.png')" }}
     >
       <div className="text-center px-4 md:px-8 lg:px-16">

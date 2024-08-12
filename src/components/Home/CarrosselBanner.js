@@ -86,9 +86,10 @@ const CarrosselBanner = () => {
           layout="fill"
           objectFit="cover"
           objectPosition="center md:center lg:center 2xl:top-right"
-          className="w-full h-full md:h-auto 2xl:object-[top_right]"
+          className="w-full h-full md:h-auto 2xl:object-[top_right] relative z-0"
         />
-        <div className="absolute top-1/2 left-4 md:left-20 lg:left-44 transform -translate-y-1/2 text-white text-[20px] md:text-[24px] lg:text-[48px] font-extrabold md:text-left text-center w-full md:w-auto">
+        <div className="absolute bottom-0 left-0 right-0 h-1/2 bg-gradient-to-t from-[#001E27]/100 to-transparent z-10"></div>
+        <div className="absolute top-1/2 left-4 md:left-20 lg:left-44 transform -translate-y-1/2 text-white text-[20px] md:text-[24px] lg:text-[48px] font-extrabold md:text-left text-center w-full md:w-auto z-20">
           <div className="mb-[1px]">
             Teste Sob
             <br className="mb-[0.5px]" />
@@ -115,9 +116,10 @@ const CarrosselBanner = () => {
           layout="fill"
           objectFit="cover"
           objectPosition="center md:center lg:center 2xl:top-right"
-          className="w-full h-full md:h-auto 2xl:object-[top_right]"
+          className="w-full h-full md:h-auto 2xl:object-[top_right] relative z-0"
         />
-        <div className="absolute top-1/2 left-4 md:left-20 lg:left-44 transform -translate-y-1/2 text-white text-[20px] md:text-[24px] lg:text-[48px] font-extrabold md:text-left text-center w-full md:w-auto">
+        <div className="absolute bottom-0 left-0 right-0 h-1/2 bg-gradient-to-t from-[#001E27]/100 to-transparent z-10"></div>
+        <div className="absolute top-1/2 left-4 md:left-20 lg:left-44 transform -translate-y-1/2 text-white text-[20px] md:text-[24px] lg:text-[48px] font-extrabold md:text-left text-center w-full md:w-auto z-20">
           <div className="mb-[1px]">
             Teste Sob
             <br className="mb-[0.5px]" />
@@ -144,9 +146,10 @@ const CarrosselBanner = () => {
           layout="fill"
           objectFit="cover"
           objectPosition="center md:center lg:center 2xl:top-right"
-          className="w-full h-full md:h-auto 2xl:object-[top_right]"
+          className="w-full h-full md:h-auto 2xl:object-[top_right] relative z-0"
         />
-        <div className="absolute top-1/2 left-4 md:left-20 lg:left-44 transform -translate-y-1/2 text-white text-[20px] md:text-[24px] lg:text-[48px] font-extrabold md:text-left text-center w-full md:w-auto">
+        <div className="absolute bottom-0 left-0 right-0 h-1/2 bg-gradient-to-t from-[#001E27]/100 to-transparent z-10"></div>
+        <div className="absolute top-1/2 left-4 md:left-20 lg:left-44 transform -translate-y-1/2 text-white text-[20px] md:text-[24px] lg:text-[48px] font-extrabold md:text-left text-center w-full md:w-auto z-20">
           <div className="mb-[1px]">
             Teste Sob
             <br className="mb-[0.5px]" />
