@@ -1,10 +1,14 @@
+import Image from "next/image";
+
 const Footer = () => {
   return (
     <div className="w-full bg-[#001E27] h-auto md:h-[460px]">
       <div className="w-full h-auto md:h-[460px] bg-[#001E27] p-6 md:pl-24 flex flex-col md:flex-row items-center justify-center">
-        <img
-          src="logo-footer.svg"
+        <Image
+          src="/logo-footer.svg"
           alt="Logo Footer"
+          width={200}
+          height={200}
           className="w-[200px] h-[200px] mb-6 md:mb-0"
         />
         <div className="flex flex-col md:flex-row md:justify-center w-full md:w-auto">
