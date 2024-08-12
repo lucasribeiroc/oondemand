@@ -15,7 +15,7 @@ const CardModulo = ({ modulo }) => {
         display: "flex",
         flexDirection: "column",
         justifyContent: "space-between",
-        borderRadius: "10px", // Adiciona border-radius
+        borderRadius: "10", // Adiciona border-radius
       }}
     >
       <div style={{ padding: "1rem" }}>
