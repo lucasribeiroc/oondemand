@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 const Solucoes = () => {
   return (
     <div className="bg-[#001E27]">
