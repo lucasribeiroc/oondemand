@@ -32,13 +32,13 @@ const ModalProduto = ({ modulo, closeModal }) => {
                       Operando em até 7 dias
                     </span>
                   </div>
-                  <div className="flex justify-center mt-2">
+                  <div className="flex justify-center mt-2 w-full">
                     <Image
                       src={modulo.imagem}
                       alt="Imagem Modal"
                       width={448}
                       height={366}
-                      className="w-[448px] h-[366px] object-cover"
+                      className="w-[448px] h-[366px] object-cover mx-auto"
                     />
                   </div>
                 </div>
@@ -86,32 +86,32 @@ const ModalProduto = ({ modulo, closeModal }) => {
                 </div>
               </div>
             </div>
-            <div className="w-full mt-4 ml-8 flex items-center text-center md:text-left justify-center md:justify-start sm:ml-0">
-              <div className="flex-shrink-0">
+            <div className="w-full mt-4 flex items-center text-center md:text-left justify-center md:justify-start md:flex-row flex-col items-center md:ml-8 ml-0">
+              <div className="flex-shrink-0 mb-4 md:mb-0">
                 <AiOutlineClockCircle
-                  className="mr-2 sm:mr-2 md:mr-2 lg:mr-2 xl:mr-2 sm:mr-0 text-[24px] sm:text-[28px] md:text-[32px] lg:text-[36px]"
+                  className="mr-2 text-[24px] md:text-[32px] lg:text-[36px]"
                   color="#00E2F4"
                 />
               </div>
-              <div className="flex flex-col items-start ml-4 sm:ml-0">
-                <span className="font-inter font-medium text-[10px] sm:text-[12px] md:text-[14px] lg:text-[16px] text-[#f5f5f5] mb-0 sm:ml-0">
+              <div className="flex flex-col items-center md:items-start mb-4 md:mb-0">
+                <span className="font-inter font-medium text-[10px] md:text-[14px] lg:text-[16px] text-[#f5f5f5] mb-0">
                   Este módulo poupou
                 </span>
-                <div className="font-inter font-bold text-[12px] sm:text-[14px] md:text-[16px] lg:text-[18px] text-[#f5f5f5] sm:ml-0">
+                <div className="font-inter font-bold text-[12px] md:text-[16px] lg:text-[18px] text-[#f5f5f5]">
                   {modulo.horasPoupadas}
                 </div>
               </div>
-              <div className="flex-shrink-0">
+              <div className="flex-shrink-0 mb-4 md:mb-0">
                 <AiOutlineDollar
-                  className="ml-4 mr-1 text-[24px] sm:text-[28px] md:text-[32px] lg:text-[36px]"
+                  className="ml-0 md:ml-4 mr-1 text-[24px] md:text-[32px] lg:text-[36px]"
                   color="#00E2F4"
                 />
               </div>
-              <div className="flex flex-col items-start ml-1">
-                <span className="font-inter font-medium text-[10px] sm:text-[12px] md:text-[14px] lg:text-[16px] text-[#f5f5f5] ml-0 mb-0">
+              <div className="flex flex-col items-center md:items-start">
+                <span className="font-inter font-medium text-[10px] md:text-[14px] lg:text-[16px] text-[#f5f5f5] mb-0">
                   Este módulo poupou
                 </span>
-                <div className="font-inter font-bold text-[12px] sm:text-[14px] md:text-[16px] lg:text-[18px] text-[#f5f5f5] ml-0">
+                <div className="font-inter font-bold text-[12px] md:text-[16px] lg:text-[18px] text-[#f5f5f5]">
                   {modulo.valorPoupado}
                 </div>
               </div>
