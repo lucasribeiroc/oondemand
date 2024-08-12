@@ -1,4 +1,3 @@
-import React from "react";
 import CardModulo from "../CardModulo";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
