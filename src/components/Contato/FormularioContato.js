@@ -11,9 +11,9 @@ const FormularioContato = () => {
           </h1>
         </div>
         <div className="font-montserrat font-medium text-[24px] text-[#f5f5f5]">
-          Sabemos que, como uma{" "}
+          Sabemos que, como um{" "}
           <span className="font-montserrat font-bold text-[24px] text-[#00e2f4]">
-            franquia Omie
+            parceiro Omie
           </span>
           , você pode encontrar desafios únicos que exigem soluções específicas.
           Queremos trabalhar juntos para garantir que suas vendas aumentem,
@@ -40,14 +40,14 @@ const FormularioContato = () => {
               htmlFor="nomeFranquia"
               className="font-montserrat font-normal text-[16px] text-[#ffffff]"
             >
-              Nome da Franquia:
+              Nome do Parceiro:
             </label>
             <input
               type="text"
-              id="nomeFranquia"
-              name="nomeFranquia"
+              id="nomeParceiro"
+              name="nomeParceiro"
               className="w-full max-w-[549px] h-[49px] p-2 mt-2 mb-[15px] rounded-[4px] bg-[#001e27] placeholder:font-montserrat placeholder:text-[14px] placeholder:text-[#809A9F]"
-              placeholder="Qual nome da franquia?"
+              placeholder="Qual nome do parceiro?"
             />
           </div>
           <div className="mb-[10px]">
