@@ -1,6 +1,7 @@
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // Importa os estilos do carousel
 import Image from "next/image";
+import Link from "next/link";
 
 const CarrosselBanner = () => {
   return (
@@ -102,9 +103,11 @@ const CarrosselBanner = () => {
             <div className="font-normal text-[16px] md:text-[16px] lg:text-[24px] leading-none">
               Seu desejo é uma ordem! Você só
               <div className="mt-[20px]">paga pelo tempo otimizado!</div>
-              <button className="mt-[20px] md:mt-[40px] lg:mt-[60px] w-[150px] md:w-[200px] lg:w-[292px] h-[30px] md:h-[40px] lg:h-[48px] bg-[#00E2F4] border border-[#6EDFF6] text-[#001E27] text-[14px] md:text-[16px] lg:text-[20px] font-bold rounded-[10px] hover:bg-[#00c2d4] active:transform active:scale-95 transition-transform">
-                Conheça nossos truques
-              </button>
+              <Link href="/produtos">
+                <button className="mt-[20px] md:mt-[40px] lg:mt-[60px] w-[150px] md:w-[200px] lg:w-[292px] h-[30px] md:h-[40px] lg:h-[48px] bg-[#00E2F4] border border-[#6EDFF6] text-[#001E27] text-[14px] md:text-[16px] lg:text-[20px] font-bold rounded-[10px] hover:bg-[#00c2d4] active:transform active:scale-95 transition-transform">
+                  Conheça nossos truques
+                </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -132,9 +135,11 @@ const CarrosselBanner = () => {
             <div className="font-normal text-[16px] md:text-[16px] lg:text-[24px] leading-none">
               Seu desejo é uma ordem! Você só
               <div className="mt-[20px]">paga pelo tempo otimizado!</div>
-              <button className="mt-[20px] md:mt-[40px] lg:mt-[60px] w-[150px] md:w-[200px] lg:w-[292px] h-[30px] md:h-[40px] lg:h-[48px] bg-[#00E2F4] border border-[#6EDFF6] text-[#001E27] text-[14px] md:text-[16px] lg:text-[20px] font-bold rounded-[10px] hover:bg-[#00c2d4] active:transform active:scale-95 transition-transform">
-                Conheça nossos truques
-              </button>
+              <Link href="/produtos">
+                <button className="mt-[20px] md:mt-[40px] lg:mt-[60px] w-[150px] md:w-[200px] lg:w-[292px] h-[30px] md:h-[40px] lg:h-[48px] bg-[#00E2F4] border border-[#6EDFF6] text-[#001E27] text-[14px] md:text-[16px] lg:text-[20px] font-bold rounded-[10px] hover:bg-[#00c2d4] active:transform active:scale-95 transition-transform">
+                  Conheça nossos truques
+                </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -162,9 +167,11 @@ const CarrosselBanner = () => {
             <div className="font-normal text-[16px] md:text-[16px] lg:text-[24px] leading-none">
               Seu desejo é uma ordem! Você só
               <div className="mt-[20px]">paga pelo tempo otimizado!</div>
-              <button className="mt-[20px] md:mt-[40px] lg:mt-[60px] w-[150px] md:w-[200px] lg:w-[292px] h-[30px] md:h-[40px] lg:h-[48px] bg-[#00E2F4] border border-[#6EDFF6] text-[#001E27] text-[14px] md:text-[16px] lg:text-[20px] font-bold rounded-[10px] hover:bg-[#00c2d4] active:transform active:scale-95 transition-transform">
-                Conheça nossos truques
-              </button>
+              <Link href="/produtos">
+                <button className="mt-[20px] md:mt-[40px] lg:mt-[60px] w-[150px] md:w-[200px] lg:w-[292px] h-[30px] md:h-[40px] lg:h-[48px] bg-[#00E2F4] border border-[#6EDFF6] text-[#001E27] text-[14px] md:text-[16px] lg:text-[20px] font-bold rounded-[10px] hover:bg-[#00c2d4] active:transform active:scale-95 transition-transform">
+                  Conheça nossos truques
+                </button>
+              </Link>
             </div>
           </div>
         </div>
