@@ -12,7 +12,7 @@ const FaqModulo = () => {
       <div className="w-full max-w-[1143px] mx-auto mt-0 space-y-4">
         <div
           className={`bg-[#00353F] text-[#aaf5fb] rounded-[10px] transition-all duration-300 overflow-hidden ${
-            activeIndex === 0 ? "max-h-[500px]" : "max-h-[120px]"
+            activeIndex === 0 ? "max-h-[600px]" : "min-h-[70px]"
           }`}
         >
           <div
@@ -20,7 +20,7 @@ const FaqModulo = () => {
             onClick={() => toggleAccordion(0)}
           >
             <div className="flex justify-between items-center text-left">
-              <span className="font-poppins text-[13px] md:text-[13px]">
+              <span className="font-poppins text-[16px] md:text-[16px]">
                 O que é a Teste?
               </span>
               <span>
@@ -45,7 +45,7 @@ const FaqModulo = () => {
               </span>
             </div>
             {activeIndex === 0 && (
-              <div className="mt-2 font-poppins text-[13px] md:text-[13px] self-end transition-opacity duration-300 opacity-100 leading-[24px] text-left">
+              <div className="mt-2 font-poppins text-[14px] md:text-[14px] self-end transition-opacity duration-300 opacity-100 leading-[24px] text-left">
                 Somos uma startup que utiliza inteligência artificial e
                 tecnologia de ponta para criar soluções que automatizam e
                 simplificam os processos da sua empresa. Nosso objetivo é
@@ -57,7 +57,7 @@ const FaqModulo = () => {
         </div>
         <div
           className={`bg-[#00353F] text-[#aaf5fb] rounded-[10px] transition-all duration-300 overflow-hidden ${
-            activeIndex === 1 ? "max-h-[500px]" : "max-h-[120px]"
+            activeIndex === 1 ? "max-h-[600px]" : "min-h-[70px]"
           }`}
         >
           <div
@@ -65,7 +65,7 @@ const FaqModulo = () => {
             onClick={() => toggleAccordion(1)}
           >
             <div className="flex justify-between items-center text-left">
-              <span className="font-poppins text-[13px] md:text-[13px]">
+              <span className="font-poppins text-[16px] md:text-[16px]">
                 Seção 2
               </span>
               <span>
@@ -90,7 +90,7 @@ const FaqModulo = () => {
               </span>
             </div>
             {activeIndex === 1 && (
-              <div className="mt-2 font-poppins text-[13px] md:text-[13px] self-end transition-opacity duration-300 opacity-100 leading-[24px] text-left">
+              <div className="mt-2 font-poppins text-[14px] md:text-[14px] self-end transition-opacity duration-300 opacity-100 leading-[24px] text-left">
                 Conteúdo da Seção 2.
               </div>
             )}
@@ -98,7 +98,7 @@ const FaqModulo = () => {
         </div>
         <div
           className={`bg-[#00353F] text-[#aaf5fb] rounded-[10px] transition-all duration-300 overflow-hidden ${
-            activeIndex === 2 ? "max-h-[500px]" : "max-h-[120px]"
+            activeIndex === 2 ? "max-h-[500px]" : "min-h-[70px]"
           }`}
         >
           <div
@@ -106,7 +106,7 @@ const FaqModulo = () => {
             onClick={() => toggleAccordion(2)}
           >
             <div className="flex justify-between items-center text-left">
-              <span className="font-poppins text-[13px] md:text-[13px]">
+              <span className="font-poppins text-[16px] md:text-[16px]">
                 Seção 3
               </span>
               <span>
@@ -131,7 +131,7 @@ const FaqModulo = () => {
               </span>
             </div>
             {activeIndex === 2 && (
-              <div className="mt-2 font-poppins text-[13px] md:text-[13px] self-end transition-opacity duration-300 opacity-100 leading-[24px] text-left">
+              <div className="mt-2 font-poppins text-[14px] md:text-[14px] self-end transition-opacity duration-300 opacity-100 leading-[24px] text-left">
                 Conteúdo da Seção 3.
               </div>
             )}
@@ -139,7 +139,7 @@ const FaqModulo = () => {
         </div>
         <div
           className={`bg-[#00353F] text-[#aaf5fb] rounded-[10px] transition-all duration-300 overflow-hidden ${
-            activeIndex === 3 ? "max-h-[500px]" : "max-h-[120px]"
+            activeIndex === 3 ? "max-h-[600px]" : "min-h-[70px]"
           }`}
         >
           <div
@@ -147,7 +147,7 @@ const FaqModulo = () => {
             onClick={() => toggleAccordion(3)}
           >
             <div className="flex justify-between items-center text-left">
-              <span className="font-poppins text-[13px] md:text-[13px]">
+              <span className="font-poppins text-[16px] md:text-[16px]">
                 Seção 4
               </span>
               <span>
@@ -172,7 +172,7 @@ const FaqModulo = () => {
               </span>
             </div>
             {activeIndex === 3 && (
-              <div className="mt-2 font-poppins text-[13px] md:text-[13px] self-end transition-opacity duration-300 opacity-100 leading-[24px] text-left">
+              <div className="mt-2 font-poppins text-[14px] md:text-[14px] self-end transition-opacity duration-300 opacity-100 leading-[24px] text-left">
                 Conteúdo da Seção 4.
               </div>
             )}

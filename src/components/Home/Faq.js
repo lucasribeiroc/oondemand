@@ -27,7 +27,7 @@ const Faq = () => {
         </p>
       </div>
       <div className="w-full max-w-[1143px] mx-auto mt-8 space-y-4">
-        <FaqModulo />
+        <FaqModulo className="min-h-[200px]" />
       </div>
     </div>
   );
