@@ -24,7 +24,7 @@ const Solucoes = () => {
           </div>
           {/* Texto adicional */}
           <div className="font-inter text-[12.74px] text-center text-white px-4">
-            Mais tempo para você focar no que realmente importa
+            Mais tempo para voc&#234; focar no que realmente importa
           </div>
         </div>
         {/* Segundo card */}
