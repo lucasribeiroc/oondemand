@@ -26,8 +26,8 @@ const FormularioContato = () => {
             aqui para resolver isso!
           </span>{" "}
           Preencha o formulário abaixo e nos diga como podemos ajudar. Nossa
-          equipe usará a nossa 'tecnomagia' para transformar suas ideias em
-          realidade.
+          equipe usará a nossa &#39;tecnomagia&#39; para transformar suas ideias
+          em realidade.
         </div>
       </div>
       <div className="bg-[#00353f] rounded-[20px] p-4 pl-[95px] md-mt-neg-320 lg-mt-neg-320 no-mt-neg max-w-[712px] flex flex-col justify-center">
