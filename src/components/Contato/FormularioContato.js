@@ -1,7 +1,9 @@
+import React from "react";
+
 const FormularioContato = () => {
   return (
-    <div className="bg-[#001e27] min-h-screen flex justify-center items-start">
-      <div className="flex flex-col items-start max-w-[434px] w-full p-4 mt-[-200px]">
+    <div className="bg-[#001e27] min-h-screen flex flex-col lg-flex-row justify-center items-start">
+      <div className="flex flex-col items-start max-w-[434px] w-full p-4 lg-mt-neg-200">
         <div className="mb-4">
           <h1 className="font-montserrat font-medium text-[40px] text-[#f5f5f5]">
             Perdendo Vendas por Falta de Funcionalidades?{" "}
@@ -30,7 +32,7 @@ const FormularioContato = () => {
           realidade.
         </div>
       </div>
-      <div className="bg-[#00353f] rounded-[20px] p-4 pl-[95px] mt-[-320px] max-w-[712px] flex flex-col justify-center">
+      <div className="bg-[#00353f] rounded-[20px] p-4 pl-[95px] md-mt-neg-320 lg-mt-neg-320 no-mt-neg max-w-[712px] flex flex-col justify-center">
         <p className="font-montserrat font-semibold text-[40px] text-[#ffffff] mt-[50px]">
           Quais Processos Vamos Otimizar Hoje?
         </p>
@@ -94,6 +96,8 @@ const FormularioContato = () => {
               className="w-full max-w-[549px] h-[49px] p-2 mt-2 mb-[15px] rounded-[4px] bg-[#001e27] placeholder:font-montserrat placeholder:text-[14px] placeholder:text-[#809A9F]"
               placeholder="Insira o e-mail aqui"
             />
+          </div>
+          <div className="mb-[10px]">
             <label
               htmlFor="whatsapp"
               className="font-montserrat font-normal text-[16px] text-[#ffffff]"
@@ -108,6 +112,111 @@ const FormularioContato = () => {
               placeholder="(xx) xxxxx-xxxx"
               className="w-full max-w-[549px] h-[49px] p-2 mt-2 mb-[15px] rounded-[4px] bg-[#001e27] placeholder:font-montserrat placeholder:text-[14px] placeholder:text-[#809A9F]"
             />
+          </div>
+          <div className="mb-[10px]">
+            <label
+              htmlFor="tipoDemanda"
+              className="font-montserrat font-normal text-[16px] text-[#ffffff] mb-4"
+            >
+              Qual tipo de demanda?
+            </label>
+            <div className="flex flex-col mt-4">
+              <label className="font-montserrat font-normal text-[15px] text-[#ffffff] mb-4">
+                <input
+                  type="checkbox"
+                  name="tipoDemanda"
+                  value="novaFuncionalidade"
+                  className="mr-2 custom-checkbox"
+                />
+                Nova funcionalidade (Micro Serviço)
+              </label>
+              <label className="font-montserrat font-normal text-[15px] text-[#ffffff] mb-4">
+                <input
+                  type="checkbox"
+                  name="tipoDemanda"
+                  value="integracaoSistemas"
+                  className="mr-2 custom-checkbox"
+                />
+                Integração com outros sistemas
+              </label>
+              <label className="font-montserrat font-normal text-[15px] text-[#ffffff] mb-4">
+                <input
+                  type="checkbox"
+                  name="tipoDemanda"
+                  value="interfacePersonalizada"
+                  className="mr-2 custom-checkbox"
+                />
+                Interface personalizada (Micro Interface)
+              </label>
+              <label className="font-montserrat font-normal text-[15px] text-[#ffffff] mb-4">
+                <input
+                  type="checkbox"
+                  name="tipoDemanda"
+                  value="outros"
+                  className="mr-2 custom-checkbox"
+                />
+                Outros
+              </label>
+            </div>
+          </div>
+          <div className="mb-[10px]">
+            <label
+              htmlFor="objeçãoAtivacao"
+              className="font-montserrat font-normal text-[16px] text-[#ffffff]"
+            >
+              Qual foi a objeção que você encontrou nessa ativação?
+            </label>
+            <textarea
+              id="objeçãoAtivacao"
+              name="objeçãoAtivacao"
+              className="w-full max-w-[549px] h-[216px] p-2 mt-2 mb-[15px] rounded-[4px] bg-[#001e27] placeholder:font-montserrat placeholder:text-[14px] placeholder:text-[#809A9F] resize-none"
+              placeholder="Descreva o problema ou a necessidade específica que você gostaria de resolver. Quanto mais detalhes, melhor."
+            ></textarea>
+          </div>
+          <div className="mb-[10px]">
+            <label
+              htmlFor="prioridade"
+              className="font-montserrat font-normal text-[16px] text-[#ffffff]"
+            >
+              Qual prioridade?
+            </label>
+            <div className="flex flex-col mt-2">
+              <label className="font-montserrat font-normal text-[15px] text-[#ffffff] mb-2">
+                <input
+                  type="radio"
+                  name="prioridade"
+                  value="altaUrgente"
+                  className="mr-2 custom-radio"
+                />
+                Alta Urgente
+              </label>
+              <label className="font-montserrat font-normal text-[15px] text-[#ffffff] mb-2">
+                <input
+                  type="radio"
+                  name="prioridade"
+                  value="media"
+                  className="mr-2 custom-radio"
+                />
+                Média
+              </label>
+              <label className="font-montserrat font-normal text-[15px] text-[#ffffff] mb-2">
+                <input
+                  type="radio"
+                  name="prioridade"
+                  value="baixa"
+                  className="mr-2 custom-radio"
+                />
+                Baixa
+              </label>
+            </div>
+          </div>
+          <div className="mt-4 mb-[50px]">
+            <button
+              type="submit"
+              className="w-full max-w-[549px] h-[68px] bg-[#00E2F4] text-[#12191E] font-montserrat font-light text-[20px] rounded-[4px]"
+            >
+              Enviar demanda
+            </button>
           </div>
         </form>
       </div>
