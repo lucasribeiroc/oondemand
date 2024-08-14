@@ -10,57 +10,21 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-[#00343F] w-full h-[79px] flex justify-between items-center px-4 md:px-8 lg:px-16">
+    <header className="bg-[#00343F] w-full h-[79px] flex justify-between items-center px-4 md:px-8 lg:px-16 z-50 relative">
       <Link href="/">
         <div className="pl-4 md:pl-8 lg:pl-16">
           <Image src="/logo-header.svg" alt="Logo" width={150} height={150} />
         </div>
       </Link>
       <nav className="absolute left-1/2 transform -translate-x-1/2 flex items-center space-x-4 md:space-x-6 lg:space-x-8">
-        <div className="relative group hidden md:block">
-          <button className="text-white flex items-center">
-            Discovery
-            <svg
-              className="w-4 h-4 ml-1"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M19 9l-7 7-7-7"
-              ></path>
-            </svg>
-          </button>
-          <div className="absolute hidden group-hover:block bg-white text-black mt-2 rounded shadow-lg">
-            <Link
-              href="/new-season"
-              className="block px-4 py-2 hover:bg-gray-200"
-            >
-              New season
-            </Link>
-            <Link
-              href="/most-searched"
-              className="block px-4 py-2 hover:bg-gray-200"
-            >
-              Most searched
-            </Link>
-            <Link
-              href="/most-selled"
-              className="block px-4 py-2 hover:bg-gray-200"
-            >
-              Most selled
-            </Link>
-          </div>
-        </div>
-        <Link href="/about" className="text-white hidden md:block">
-          About
+        <Link href="/produtos" className="text-white hidden md:block">
+          Produtos
         </Link>
-        <Link href="/contact-us" className="text-white hidden md:block">
-          Contact Us
+        <Link href="/contato" className="text-white hidden md:block">
+          Sob Demanda
+        </Link>
+        <Link href="/#nossos-clientes" className="text-white hidden md:block">
+          Nossos Clientes
         </Link>
       </nav>
       <div className="flex items-center space-x-4 md:space-x-6 lg:space-x-8 pr-4 md:pr-8 lg:pr-16">
@@ -93,39 +57,21 @@ const Header = () => {
           </svg>
         </button>
         {isDropdownOpen && (
-          <div className="absolute bg-white text-black mt-2 rounded shadow-lg">
+          <div className="absolute bg-white text-black mt-2 rounded shadow-lg z-50">
             <Link
-              href="/discovery"
+              href="/produtos"
               className="block px-4 py-2 hover:bg-gray-200"
             >
-              Discovery
+              Produtos
             </Link>
-            <Link href="/about" className="block px-4 py-2 hover:bg-gray-200">
-              About
-            </Link>
-            <Link
-              href="/contact-us"
-              className="block px-4 py-2 hover:bg-gray-200"
-            >
-              Contact Us
+            <Link href="/contato" className="block px-4 py-2 hover:bg-gray-200">
+              Sob Demanda
             </Link>
             <Link
-              href="/new-season"
+              href="/#nossos-clientes"
               className="block px-4 py-2 hover:bg-gray-200"
             >
-              New season
-            </Link>
-            <Link
-              href="/most-searched"
-              className="block px-4 py-2 hover:bg-gray-200"
-            >
-              Most searched
-            </Link>
-            <Link
-              href="/most-selled"
-              className="block px-4 py-2 hover:bg-gray-200"
-            >
-              Most selled
+              Nossos Clientes
             </Link>
           </div>
         )}

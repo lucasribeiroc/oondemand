@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const Clientes = () => {
   return (
-    <div className="w-full bg-white p-5 pb-24 box-border">
+    <div className="w-full bg-white p-5 pb-24 box-border" id="nossos-clientes">
       <h1
         style={{
           fontFamily: "Montserrat, sans-serif",
