@@ -119,17 +119,7 @@ const ModalProduto = ({ modulo, closeModal }) => {
               </div>
             </div>
           </div>
-          <button className="w-full max-w-[1087px] max-h-[72px] bg-[#37BE4A] text-[#f5f5f5] font-montserrat font-bold text-[16px] md:text-[18px] lg:text-[20px] flex items-center justify-center mt-0 py-2">
-            <Image
-              src="/whatsapp.png"
-              alt="WhatsApp"
-              className="mr-2 w-[16px] h-[16px] md:w-[20px] md:h-[20px] lg:w-[24px] lg:h-[24px]"
-              width={24}
-              height={24}
-            />
-            Falar com um consultor
-          </button>
-          <div className="w-full max-w-[1086px] bg-[#00353f] bg-opacity-40 mt-[60px] mx-auto pt-[30px] pl-[50px] pr-[50px] rounded-[10px]">
+          <div className="w-full max-w-[1086px] bg-[#00353f] bg-opacity-40 mt-[10px] mx-auto pt-[30px] pl-[50px] pr-[50px] rounded-[10px]">
             <h3 className="text-left font-inter font-medium text-[24px] text-[#f5f5f5]">
               Case
             </h3>
@@ -190,7 +180,7 @@ const ModalProduto = ({ modulo, closeModal }) => {
               </ol>
             </p>
           </div>
-          <div className="w-full max-w-[1086px] bg-[#00353f] bg-opacity-40 mt-[60px] mx-auto pt-[30px] pl-[50px] pr-[50px] rounded-[10px] pb-[40px]">
+          <div className="w-full max-w-[1086px] bg-[#00353f] bg-opacity-40 mt-[60px] mx-auto pt-[30px] pl-[50px] pr-[50px] rounded-[10px] pb-[40px] mb-[30px]">
             <h3 className="text-left font-inter font-medium text-[24px] text-[#f5f5f5]">
               Dependências
             </h3>
@@ -203,6 +193,16 @@ const ModalProduto = ({ modulo, closeModal }) => {
                 <li key={index}>{item}</li>
               ))}
             </ul>
+          </div>
+          <div className="sticky bottom-0 w-full max-w-[1087px] bg-[#37BE4A] text-[#f5f5f5] font-montserrat font-bold text-[16px] md:text-[18px] lg:text-[20px] flex items-center justify-center py-2">
+            <Image
+              src="/whatsapp.png"
+              alt="WhatsApp"
+              className="mr-2 w-[16px] h-[16px] md:w-[20px] md:h-[20px] lg:w-[24px] lg:h-[24px]"
+              width={24}
+              height={24}
+            />
+            Falar com um consultor
           </div>
         </div>
       </div>
