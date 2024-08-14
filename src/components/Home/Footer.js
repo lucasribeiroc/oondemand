@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -13,42 +14,41 @@ const Footer = () => {
         />
         <div className="flex flex-col md:flex-row md:justify-center w-full md:w-auto">
           <div className="md:pl-[50px] mb-6 md:mb-0 text-center md:text-left">
-            <p className="text-[#00E2F4] font-montserrat text-[16px]">
-              Discovery
-            </p>
-            <p className="text-[#E1E1E1] font-montserrat text-[16px] mt-8">
-              New Season
-            </p>
-            <p className="text-[#E1E1E1] font-montserrat text-[16px] mt-8">
-              Most searched
-            </p>
-            <p className="text-[#E1E1E1] font-montserrat text-[16px] mt-8">
-              Most selled
-            </p>
+            <Link href="/contato">
+              <span className="text-[#E1E1E1] font-montserrat text-[16px] mt-8 block">
+                Contato
+              </span>
+            </Link>
+            <Link href="/produtos">
+              <span className="text-[#E1E1E1] font-montserrat text-[16px] mt-8 block">
+                Produtos
+              </span>
+            </Link>
+            <Link href="/#faq">
+              <span className="text-[#E1E1E1] font-montserrat text-[16px] mt-8 block">
+                Perguntas Frequentes
+              </span>
+            </Link>
           </div>
           <div className="md:pl-[50px] mb-6 md:mb-0 text-center md:text-left">
-            <p className="text-[#00E2F4] font-montserrat text-[16px]">About</p>
-            <p className="text-[#E1E1E1] font-montserrat text-[16px] mt-8">
-              Help
-            </p>
-            <p className="text-[#E1E1E1] font-montserrat text-[16px] mt-8">
-              Shipping
-            </p>
-            <p className="text-[#E1E1E1] font-montserrat text-[16px] mt-8">
-              Affiliate
-            </p>
-          </div>
-          <div className="md:pl-[50px] text-center md:text-left">
-            <p className="text-[#00E2F4] font-montserrat text-[16px]">Info</p>
-            <p className="text-[#E1E1E1] font-montserrat text-[16px] mt-8">
-              Contact us
-            </p>
-            <p className="text-[#E1E1E1] font-montserrat text-[16px] mt-8">
-              Privacy Policies
-            </p>
-            <p className="text-[#E1E1E1] font-montserrat text-[16px] mt-8">
-              Terms & Conditions
-            </p>
+            <Link href="https://forms.gle/gXjNvQjN5qv9Y4Wb6">
+              <span
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#E1E1E1] font-montserrat text-[16px] mt-8 block"
+              >
+                Faça parte do nosso Squad de Dev
+              </span>
+            </Link>
+            <Link href="https://www.linkedin.com/company/oondemand">
+              <span
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#E1E1E1] font-montserrat text-[16px] mt-8 block"
+              >
+                Nossas redes sociais
+              </span>
+            </Link>
           </div>
         </div>
       </div>

@@ -23,7 +23,7 @@ const FaqModulo = () => {
               <span className="font-poppins text-[16px] md:text-[16px]">
                 O que é a Teste?
               </span>
-              <span>
+              <span className="pl-2.5">
                 <svg
                   data-accordion-icon
                   className={`w-3 h-3 shrink-0 transition-transform duration-300 ${
@@ -68,7 +68,7 @@ const FaqModulo = () => {
               <span className="font-poppins text-[16px] md:text-[16px]">
                 Seção 2
               </span>
-              <span>
+              <span className="pl-2.5">
                 <svg
                   data-accordion-icon
                   className={`w-3 h-3 shrink-0 transition-transform duration-300 ${
@@ -109,7 +109,7 @@ const FaqModulo = () => {
               <span className="font-poppins text-[16px] md:text-[16px]">
                 Seção 3
               </span>
-              <span>
+              <span className="pl-2.5">
                 <svg
                   data-accordion-icon
                   className={`w-3 h-3 shrink-0 transition-transform duration-300 ${
@@ -150,7 +150,7 @@ const FaqModulo = () => {
               <span className="font-poppins text-[16px] md:text-[16px]">
                 Seção 4
               </span>
-              <span>
+              <span className="pl-2.5">
                 <svg
                   data-accordion-icon
                   className={`w-3 h-3 shrink-0 transition-transform duration-300 ${

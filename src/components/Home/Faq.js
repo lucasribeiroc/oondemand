@@ -1,15 +1,8 @@
-import { useState } from "react";
 import FaqModulo from "../FaqModulo";
 
 const Faq = () => {
-  const [activeIndex, setActiveIndex] = useState(null);
-
-  const toggleAccordion = (index) => {
-    setActiveIndex(activeIndex === index ? null : index);
-  };
-
   return (
-    <div className="w-full h-auto bg-[#001E27] p-4 md:p-8 lg:p-16">
+    <div className="w-full h-auto bg-[#001E27] p-4 md:p-8 lg:p-16" id="faq">
       <div className="text-center pt-10 md:pt-20">
         <p className="font-poppins font-bold text-[24px] md:text-[36px] lg:text-[48px] text-[#00e2f4] inline">
           Sua primeira vez
