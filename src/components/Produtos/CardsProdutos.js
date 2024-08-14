@@ -363,7 +363,7 @@ const CardsProdutos = () => {
             <button
               key={filter}
               onClick={() => toggleFilter(filter)}
-              className={`font-montserrat font-medium text-[12px] md:text-[14px] tracking-[0.2px] px-4 py-1 mb-2 ${
+              className={`font-montserrat font-medium text-[14px] md:text-[16px] tracking-[0.2px] px-4 py-1 mb-2 ${
                 selectedFilters.includes(filter)
                   ? "bg-[#00E2F4] text-[#001E27] rounded-[30px]"
                   : "text-white"
