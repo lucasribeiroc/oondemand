@@ -1,5 +1,3 @@
-import React from "react";
-
 const FormularioContato = () => {
   return (
     <div className="bg-[#001e27] min-h-screen flex flex-col lg-flex-row justify-center items-start">
